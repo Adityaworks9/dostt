@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#e7e5df;font-family:'Poppins',sans-serif}
+  @keyframes dpulse{0%,100%{box-shadow:0 0 0 0 rgba(124,58,237,.45)}50%{box-shadow:0 0 0 14px rgba(124,58,237,0)}}
+  @keyframes dfade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  @keyframes dsteam{0%{opacity:0;transform:translateY(0) scaleX(1)}40%{opacity:.65}100%{opacity:0;transform:translateY(-24px) scaleX(1.4)}}
+  @keyframes ddot{0%,100%{box-shadow:0 0 0 0 rgba(16,185,129,.55)}50%{box-shadow:0 0 0 6px rgba(16,185,129,0)}}
+  @keyframes dfloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+  @keyframes dbounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px) scale(1.08)}}
+  @keyframes dspin{to{transform:rotate(360deg)}}
+  @keyframes dspinr{to{transform:rotate(-360deg)}}
+</style>
+</helmet>
+<div style="background:#e7e5df;width:max-content;min-width:100%;min-height:100vh;box-sizing:border-box;padding:48px">
+
+  <!-- ===== TITLE ===== -->
+  <div style="max-width:760px;margin-bottom:8px">
+    <div style="display:flex;align-items:center;gap:8px;font-size:13px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#7C3AED"><svg viewBox="0 0 64 64" width="18" height="18" style="flex:none"><path d="M32 6c-12 0-20 9-20 21v25c0 2.4 2.8 3.6 4.6 2L22 49l5 4 5-4 5 4 5-4 5.4 5c1.8 1.6 4.6.4 4.6-2V27C52 15 44 6 32 6Z" fill="#7C3AED"/><circle cx="25" cy="27" r="3.4" fill="#fff"/><circle cx="39" cy="27" r="3.4" fill="#fff"/></svg>dostt · retention &amp; engagement</div>
+    <h1 style="font-size:40px;font-weight:700;letter-spacing:-0.02em;color:#1a1523;margin-top:10px">Five features that bring people back</h1>
+    <p style="font-size:16px;color:#6B7280;margin-top:10px;line-height:1.55">Mobile-first, 390px. Warm, anonymous, human. Every screen is a natural extension of dostt - never a feature announcement.</p>
+  </div>
+
+  <!-- ============ FEATURE 1 ============ -->
+  <div style="margin-top:56px">
+    <div style="display:flex;align-items:baseline;gap:14px"><span style="font-size:13px;font-weight:700;letter-spacing:.14em;color:#7C3AED">FEATURE 01</span><h2 style="font-size:24px;font-weight:700;letter-spacing:-0.01em;color:#1a1523">Ice-breaker prompt at call start</h2></div>
+    <p style="font-size:14px;color:#6B7280;max-width:720px;margin:6px 0 26px;line-height:1.5">A shared question - written in the user's inner voice - appears to both people before the call connects. A mirror, not a form field.</p>
+  </div>
+  <div style="display:flex;gap:40px;align-items:flex-start">
+
+    <!-- 1A -->
+    <div style="flex:none;width:390px">
+      <div style="font-size:13px;font-weight:600;color:#52525B;margin-bottom:10px">A · Pre-call - shared prompt</div>
+      <div style="width:390px;height:800px;border-radius:42px;overflow:hidden;background:linear-gradient(180deg,#2D1B69 0%,#1c1242 55%,#150d33 100%);box-shadow:0 14px 44px rgba(0,0,0,.28);color:#fff;display:flex;flex-direction:column">
+        <div style="padding:56px 22px 0;display:flex;align-items:center;justify-content:space-between"><span style="font-size:24px">‹</span><span style="font-size:13px;color:#C4B5FD;letter-spacing:.05em">Before you talk</span><span style="width:24px"></span></div>
+        <div style="padding:30px 22px 0;display:flex;flex-direction:column;align-items:center">
+          <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);border-radius:999px;padding:9px 18px;font-size:13px;font-weight:500"><svg width="15" height="15" viewBox="0 0 24 24" fill="#C4B5FD"><path d="M12 21s-7-4.5-9.5-8.5A5 5 0 0 1 12 6a5 5 0 0 1 9.5 6.5C19 16.5 12 21 12 21z"/></svg>Family &amp; relationships</div>
+          <div style="font-size:12px;color:#9d8fce;margin-top:30px;letter-spacing:.12em">YOU BOTH SEE THIS</div>
+        </div>
+        <div style="padding:16px 22px 0;flex:1">
+          <div style="background:rgba(255,255,255,.08);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.16);border-radius:26px;padding:32px 28px;animation:dpulse 3.2s ease-in-out infinite">
+            <div style="margin-bottom:18px"><svg viewBox="0 0 64 64" width="40" height="40"><path d="M32 6c-12 0-20 9-20 21v25c0 2.4 2.8 3.6 4.6 2L22 49l5 4 5-4 5 4 5-4 5.4 5c1.8 1.6 4.6.4 4.6-2V27C52 15 44 6 32 6Z" fill="#fff"/><circle cx="25" cy="27" r="3.4" fill="#2D1B69"/><circle cx="39" cy="27" r="3.4" fill="#2D1B69"/><circle cx="20" cy="34" r="2.4" fill="#F9C8D6" opacity=".7"/><circle cx="44" cy="34" r="2.4" fill="#F9C8D6" opacity=".7"/></svg></div>
+            <div style="font-size:26px;font-weight:600;line-height:1.34;letter-spacing:-0.01em">What's something you've been carrying that you haven't said out loud yet?</div>
+          </div>
+          <div style="text-align:center;font-size:14px;color:#9d8fce;margin-top:24px;line-height:1.5">No right answer. Start wherever feels true.</div>
+        </div>
+        <div style="padding:0 22px 42px">
+          <div style="background:linear-gradient(90deg,#7C3AED,#A855F7);border-radius:12px;padding:18px;text-align:center;font-size:16px;font-weight:600;box-shadow:0 10px 30px rgba(124,58,237,.5)">I'm ready to talk</div>
+          <div style="text-align:center;font-size:14px;color:#9d8fce;margin-top:16px">Maybe later</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 1B -->
+    <div style="flex:none;width:390px">
+      <div style="font-size:13px;font-weight:600;color:#52525B;margin-bottom:10px">B · Connecting - prompt card gently pulses</div>
+      <div style="width:390px;height:800px;border-radius:42px;overflow:hidden;background:radial-gradient(120% 80% at 50% 28%,#3a2280 0%,#1c1242 55%,#120a2c 100%);box-shadow:0 14px 44px rgba(0,0,0,.28);color:#fff;display:flex;flex-direction:column;align-items:center">
+        <div style="padding-top:118px;display:flex;align-items:center">
+          <div style="width:76px;height:76px;border-radius:50%;background:linear-gradient(135deg,#A855F7,#7C3AED);display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:600;border:3px solid #1c1242">You</div>
+          <div style="width:76px;height:76px;border-radius:50%;overflow:hidden;border:3px solid #1c1242;margin-left:-18px"><svg viewBox="0 0 64 64" width="76" height="76"><rect width="64" height="64" rx="32" fill="#3a2a63"/><circle cx="32" cy="50" r="23" fill="#E0A878"/><circle cx="32" cy="32" r="15" fill="#EBB484"/><path d="M16 31q0-19 16-19t16 19q1-9-4-15t-12-6-12 6-4 15Z" fill="#241a10"/><circle cx="27" cy="32" r="1.7" fill="#241a10"/><circle cx="37" cy="32" r="1.7" fill="#241a10"/><path d="M28 37q4 3.4 8 0" stroke="#a86a3c" stroke-width="1.7" fill="none" stroke-linecap="round"/></svg></div>
+        </div>
+        <div style="font-size:22px;font-weight:600;margin-top:38px;text-align:center;padding:0 44px;line-height:1.4">Connecting you with someone who gets it…</div>
+        <div style="display:flex;gap:7px;margin-top:22px">
+          <div style="width:8px;height:8px;border-radius:50%;background:#C4B5FD;animation:ddot 1.4s ease-in-out infinite"></div>
+          <div style="width:8px;height:8px;border-radius:50%;background:#C4B5FD;animation:ddot 1.4s ease-in-out .2s infinite"></div>
+          <div style="width:8px;height:8px;border-radius:50%;background:#C4B5FD;animation:ddot 1.4s ease-in-out .4s infinite"></div>
+        </div>
+        <div style="padding:46px 26px 0;width:100%">
+          <div style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:24px;padding:28px;animation:dpulse 2.4s ease-in-out infinite">
+            <div style="font-size:12px;color:#9d8fce;letter-spacing:.12em;margin-bottom:12px">YOUR SHARED PROMPT</div>
+            <div style="font-size:21px;font-weight:600;line-height:1.38">What's something you've been carrying that you haven't said out loud yet?</div>
+          </div>
+        </div>
+        <div style="margin-top:auto;padding-bottom:56px;font-size:14px;color:#9d8fce">Take a breath. You're safe here.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ FEATURE 2 ============ -->
+  <div style="margin-top:64px">
+    <div style="display:flex;align-items:baseline;gap:14px"><span style="font-size:13px;font-weight:700;letter-spacing:.14em;color:#7C3AED">FEATURE 02</span><h2 style="font-size:24px;font-weight:700;letter-spacing:-0.01em;color:#1a1523">Post-call listener message</h2></div>
+    <p style="font-size:14px;color:#6B7280;max-width:720px;margin:6px 0 26px;line-height:1.5">The listener leaves a thought; it arrives 1–2 hours later like a letter, not a chat ping. The caller must open the app to read it.</p>
+  </div>
+  <div style="display:flex;gap:40px;align-items:flex-start">
+
+    <!-- 2A -->
+    <div style="flex:none;width:390px">
+      <div style="font-size:13px;font-weight:600;color:#52525B;margin-bottom:10px">A · Listener writes</div>
+      <div style="width:390px;height:800px;border-radius:42px;overflow:hidden;background:#0f0a1f;box-shadow:0 14px 44px rgba(0,0,0,.28);color:#fff;display:flex;flex-direction:column">
+        <div style="padding:56px 22px 0;text-align:center">
+          <div style="font-size:12px;color:#9d8fce;letter-spacing:.12em">CALL ENDED · 14 MIN</div>
+          <div style="width:66px;height:66px;border-radius:50%;overflow:hidden;margin:22px auto 0"><svg viewBox="0 0 64 64" width="66" height="66"><rect width="64" height="64" rx="32" fill="#3a2a63"/><circle cx="32" cy="50" r="23" fill="#E0A878"/><circle cx="32" cy="32" r="15" fill="#EBB484"/><path d="M16 31q0-19 16-19t16 19q1-9-4-15t-12-6-12 6-4 15Z" fill="#241a10"/><circle cx="27" cy="32" r="1.7" fill="#241a10"/><circle cx="37" cy="32" r="1.7" fill="#241a10"/><path d="M28 37q4 3.4 8 0" stroke="#a86a3c" stroke-width="1.7" fill="none" stroke-linecap="round"/></svg></div>
+          <div style="font-size:21px;font-weight:600;margin-top:16px">Leave SilentPanda a thought…</div>
+          <div style="font-size:14px;color:#9d8fce;margin-top:6px;padding:0 28px;line-height:1.5">They'll read it in a little while. Make it worth carrying.</div>
+        </div>
+        <div style="padding:26px 22px 0">
+          <div style="background:#1a1330;border:1px solid rgba(124,58,237,.4);border-radius:16px;padding:18px;min-height:132px;font-size:16px;line-height:1.5">You spoke about your mother with so much grace. I hope you give yourself the same.<span style="color:#A855F7">|</span></div>
+          <div style="display:flex;justify-content:space-between;margin-top:10px;font-size:13px;color:#9d8fce"><span>Something worth carrying with them.</span><span style="color:#C4B5FD">96 / 120</span></div>
+        </div>
+        <div style="margin-top:auto;padding:0 22px 42px">
+          <div style="background:linear-gradient(90deg,#7C3AED,#A855F7);border-radius:12px;padding:18px;text-align:center;font-size:16px;font-weight:600;box-shadow:0 10px 30px rgba(124,58,237,.4);display:flex;align-items:center;justify-content:center;gap:8px">Send your thought<svg viewBox="0 0 64 64" width="17" height="17"><path d="M32 6c-12 0-20 9-20 21v25c0 2.4 2.8 3.6 4.6 2L22 49l5 4 5-4 5 4 5-4 5.4 5c1.8 1.6 4.6.4 4.6-2V27C52 15 44 6 32 6Z" fill="#fff"/><circle cx="25" cy="27" r="3.4" fill="#7C3AED"/><circle cx="39" cy="27" r="3.4" fill="#7C3AED"/></svg></div>
+          <div style="text-align:center;font-size:14px;color:#9d8fce;margin-top:16px">Skip - end without a note</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2B -->
+    <div style="flex:none;width:390px">
+      <div style="font-size:13px;font-weight:600;color:#52525B;margin-bottom:10px">B · Caller notification (1–2h later)</div>
+      <div style="width:390px;height:800px;border-radius:42px;overflow:hidden;background:linear-gradient(180deg,#241655,#0c0820);box-shadow:0 14px 44px rgba(0,0,0,.28);color:#fff">
+        <div style="padding-top:76px;text-align:center;font-size:15px;color:#cdbff2;font-weight:500">9:41</div>
+        <div style="font-size:78px;font-weight:300;text-align:center;margin-top:4px;letter-spacing:-.02em">7:18</div>
+        <div style="font-size:15px;color:#cdbff2;text-align:center">Sunday, 22 June</div>
+        <div style="padding:56px 16px 0">
+          <div style="background:rgba(255,255,255,.14);backdrop-filter:blur(20px);border-radius:22px;padding:16px;display:flex;gap:13px;align-items:flex-start">
+            <div style="width:40px;height:40px;border-radius:10px;background:#fff;display:flex;align-items:center;justify-content:center"><svg viewBox="0 0 64 64" width="26" height="26"><path d="M32 6c-12 0-20 9-20 21v25c0 2.4 2.8 3.6 4.6 2L22 49l5 4 5-4 5 4 5-4 5.4 5c1.8 1.6 4.6.4 4.6-2V27C52 15 44 6 32 6Z" fill="#7C3AED"/><circle cx="25" cy="27" r="3.4" fill="#fff"/><circle cx="39" cy="27" r="3.4" fill="#fff"/></svg></div>
+            <div style="flex:1">
+              <div style="display:flex;justify-content:space-between"><span style="font-size:14px;font-weight:600">Dostt</span><span style="font-size:12px;color:#cdbff2">now</span></div>
+              <div style="font-size:15px;font-weight:600;margin-top:3px">Your listener left you something.</div>
+              <div style="font-size:14px;color:#e3dbf5;margin-top:2px;line-height:1.42">SilentPanda wrote you a thought after your call. Open when you're ready.</div>
+            </div>
+          </div>
+        </div>
+        <div style="position:absolute"></div>
+        <div style="position:relative;margin-top:430px;display:flex;justify-content:center"><div style="width:134px;height:5px;border-radius:3px;background:rgba(255,255,255,.4)"></div></div>
+      </div>
+    </div>
+
+    <!-- 2C -->
+    <div style="flex:none;width:390px">
+      <div style="font-size:13px;font-weight:600;color:#52525B;margin-bottom:10px">C · Reveal - fades in word by word</div>
+      <div style="width:390px;height:800px;border-radius:42px;overflow:hidden;background:#FBFAFF;box-shadow:0 14px 44px rgba(0,0,0,.28);color:#1a1523;display:flex;flex-direction:column">
+        <div style="padding:56px 22px 0;text-align:center"><div style="font-size:12px;color:#7C3AED;letter-spacing:.14em;font-weight:600">A THOUGHT FOR YOU</div></div>
+        <div style="padding:40px 30px 0;flex:1">
+          <div style="width:62px;height:62px;border-radius:50%;overflow:hidden;margin-bottom:26px"><svg viewBox="0 0 64 64" width="62" height="62"><rect width="64" height="64" rx="32" fill="#3a2a63"/><circle cx="32" cy="50" r="23" fill="#E0A878"/><circle cx="32" cy="32" r="15" fill="#EBB484"/><path d="M16 31q0-19 16-19t16 19q1-9-4-15t-12-6-12 6-4 15Z" fill="#241a10"/><circle cx="27" cy="32" r="1.7" fill="#241a10"/><circle cx="37" cy="32" r="1.7" fill="#241a10"/><path d="M28 37q4 3.4 8 0" stroke="#a86a3c" stroke-width="1.7" fill="none" stroke-linecap="round"/></svg></div>
+          <div style="font-size:26px;font-weight:500;line-height:1.52;letter-spacing:-0.01em">
+            <span class="wd" style="animation-delay:0s">You </span><span class="wd" style="animation-delay:.12s">spoke </span><span class="wd" style="animation-delay:.24s">about </span><span class="wd" style="animation-delay:.36s">your </span><span class="wd" style="animation-delay:.48s">mother </span><span class="wd" style="animation-delay:.6s">with </span><span class="wd" style="animation-delay:.72s">so </span><span class="wd" style="animation-delay:.84s">much </span><span class="wd" style="animation-delay:.96s">grace. </span><span class="wd" style="animation-delay:1.08s">I </span><span class="wd" style="animation-delay:1.2s">hope </span><span class="wd" style="animation-delay:1.32s">you </span><span class="wd" style="animation-delay:1.44s">give </span><span class="wd" style="animation-delay:1.56s">yourself </span><span class="wd" style="animation-delay:1.68s">the </span><span class="wd" style="animation-delay:1.8s">same.</span>
+          </div>
+          <div style="font-size:14px;color:#6B7280;margin-top:28px">- SilentPanda, after your call</div>
+        </div>
+        <div style="padding:0 22px 42px;display:flex;flex-direction:column;gap:12px">
+          <div style="background:linear-gradient(90deg,#7C3AED,#A855F7);border-radius:12px;padding:17px;text-align:center;font-size:16px;font-weight:600;color:#fff">Talk again →</div>
+          <div style="border:1.5px solid #EDE9FE;background:#F3F0FF;border-radius:12px;padding:17px;text-align:center;font-size:16px;font-weight:600;color:#7C3AED;display:flex;align-items:center;justify-content:center;gap:8px"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 8.6a4.5 4.5 0 0 0-7.8-3 4.5 4.5 0 0 0-7.8 3c0 4.5 7.8 9.4 7.8 9.4s7.8-4.9 7.8-9.4Z"/></svg>Save this message</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2D -->
+    <div style="flex:none;width:390px">
+      <div style="font-size:13px;font-weight:600;color:#52525B;margin-bottom:10px">D · Empty state</div>
+      <div style="width:390px;height:800px;border-radius:42px;overflow:hidden;background:#FBFAFF;box-shadow:0 14px 44px rgba(0,0,0,.28);color:#1a1523;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:0 42px;text-align:center">
+        <div style="animation:dfloat 3s ease-in-out infinite"><svg viewBox="0 0 64 64" width="82" height="82"><path d="M32 6c-12 0-20 9-20 21v25c0 2.4 2.8 3.6 4.6 2L22 49l5 4 5-4 5 4 5-4 5.4 5c1.8 1.6 4.6.4 4.6-2V27C52 15 44 6 32 6Z" fill="#7C3AED"/><circle cx="25" cy="27" r="3.4" fill="#fff"/><circle cx="39" cy="27" r="3.4" fill="#fff"/><circle cx="20" cy="34" r="2.4" fill="#fff" opacity=".4"/><circle cx="44" cy="34" r="2.4" fill="#fff" opacity=".4"/></svg></div>
+        <div style="font-size:24px;font-weight:600;margin-top:24px;line-height:1.4">No message yet -<br>come back tomorrow.</div>
+        <div style="font-size:15px;color:#6B7280;margin-top:12px;line-height:1.55">Not every call ends in words. The quiet ones still counted.</div>
+        <div style="margin-top:34px;border:1.5px solid #EDE9FE;background:#F3F0FF;border-radius:12px;padding:15px 30px;font-size:15px;font-weight:600;color:#7C3AED">Find someone to talk to</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ FEATURE 3 ============ -->
+  <div style="margin-top:64px">
+    <div style="display:flex;align-items:baseline;gap:14px"><span style="font-size:13px;font-weight:700;letter-spacing:.14em;color:#7C3AED">FEATURE 03</span><h2 style="font-size:24px;font-weight:700;letter-spacing:-0.01em;color:#1a1523">Offline social validation</h2></div>
+    <p style="font-size:14px;color:#6B7280;max-width:720px;margin:6px 0 26px;line-height:1.5">After 6+ hours away, a quiet compliment - not a gamified achievement. No confetti, no big numbers.</p>
+  </div>
+  <div style="display:flex;gap:40px;align-items:flex-start">
+
+    <!-- 3A -->
+    <div style="flex:none;width:390px">
+      <div style="font-size:13px;font-weight:600;color:#52525B;margin-bottom:10px">A · Lock-screen push</div>
+      <div style="width:390px;height:800px;border-radius:42px;overflow:hidden;background:linear-gradient(165deg,#3b2a63,#1a1338 70%);box-shadow:0 14px 44px rgba(0,0,0,.28);color:#fff">
+        <div style="padding-top:78px;text-align:center;font-size:15px;color:#d9cff0;font-weight:500">Monday, 23 June</div>
+        <div style="font-size:80px;font-weight:300;text-align:center;margin-top:2px;letter-spacing:-.02em">8:30</div>
+        <div style="padding:60px 16px 0">
+          <div style="background:rgba(255,255,255,.14);backdrop-filter:blur(20px);border-radius:22px;padding:16px;display:flex;gap:13px;align-items:flex-start">
+            <div style="width:40px;height:40px;border-radius:10px;background:#fff;display:flex;align-items:center;justify-content:center"><svg viewBox="0 0 64 64" width="26" height="26"><path d="M32 6c-12 0-20 9-20 21v25c0 2.4 2.8 3.6 4.6 2L22 49l5 4 5-4 5 4 5-4 5.4 5c1.8 1.6 4.6.4 4.6-2V27C52 15 44 6 32 6Z" fill="#7C3AED"/><circle cx="25" cy="27" r="3.4" fill="#fff"/><circle cx="39" cy="27" r="3.4" fill="#fff"/></svg></div>
+            <div style="flex:1">
+              <div style="display:flex;justify-content:space-between"><span style="font-size:14px;font-weight:600">Dostt</span><span style="font-size:12px;color:#cdbff2">2h ago</span></div>
+              <div style="font-size:15px;font-weight:600;margin-top:3px;display:flex;align-items:center;gap:6px">Someone noticed.<svg viewBox="0 0 64 64" width="15" height="15"><path d="M32 6c-12 0-20 9-20 21v25c0 2.4 2.8 3.6 4.6 2L22 49l5 4 5-4 5 4 5-4 5.4 5c1.8 1.6 4.6.4 4.6-2V27C52 15 44 6 32 6Z" fill="#fff"/><circle cx="25" cy="27" r="3.4" fill="#2D1B69"/><circle cx="39" cy="27" r="3.4" fill="#2D1B69"/></svg></div>
+              <div style="font-size:14px;color:#e3dbf5;margin-top:2px;line-height:1.42">2 listeners appreciated your conversation today.</div>
+            </div>
+          </div>
+        </div>
+        <div style="position:relative;margin-top:418px;display:flex;justify-content:center"><div style="width:134px;height:5px;border-radius:3px;background:rgba(255,255,255,.4)"></div></div>
+      </div>
+    </div>
+
+    <!-- 3B -->
+    <div style="flex:none;width:390px">
+      <div style="font-size:13px;font-weight:600;color:#52525B;margin-bottom:10px">B · In-app landing - cards fade in</div>
+      <div style="width:390px;height:800px;border-radius:42px;overflow:hidden;background:#F3F0FF;box-shadow:0 14px 44px rgba(0,0,0,.28);color:#1a1523;display:flex;flex-direction:column">
+        <div style="padding:56px 24px 0;text-align:center">
+          <div><svg viewBox="0 0 64 64" width="38" height="38"><path d="M32 6c-12 0-20 9-20 21v25c0 2.4 2.8 3.6 4.6 2L22 49l5 4 5-4 5 4 5-4 5.4 5c1.8 1.6 4.6.4 4.6-2V27C52 15 44 6 32 6Z" fill="#7C3AED"/><circle cx="25" cy="27" r="3.4" fill="#fff"/><circle cx="39" cy="27" r="3.4" fill="#fff"/><circle cx="20" cy="34" r="2.4" fill="#fff" opacity=".4"/><circle cx="44" cy="34" r="2.4" fill="#fff" opacity=".4"/></svg></div>
+          <div style="font-size:24px;font-weight:600;margin-top:18px;line-height:1.36;padding:0 8px">Here's what people felt after talking with you.</div>
+          <div style="font-size:14px;color:#6B7280;margin-top:10px">Two listeners, earlier today.</div>
+        </div>
+        <div style="padding:34px 24px 0;display:flex;flex-direction:column;gap:14px">
+          <div class="wd" style="animation-delay:.1s;background:#fff;border-radius:18px;padding:20px;display:flex;align-items:center;gap:16px;box-shadow:0 4px 18px rgba(124,58,237,.08)">
+            <div style="width:52px;height:52px;border-radius:50%;overflow:hidden;flex:none"><svg viewBox="0 0 64 64" width="52" height="52"><rect width="64" height="64" rx="32" fill="#4a3470"/><circle cx="32" cy="50" r="23" fill="#E0A878"/><circle cx="32" cy="32" r="15" fill="#EBB484"/><path d="M16 31q0-19 16-19t16 19q1-9-4-15t-12-6-12 6-4 15Z" fill="#241a10"/><circle cx="27" cy="32" r="1.7" fill="#241a10"/><circle cx="37" cy="32" r="1.7" fill="#241a10"/><path d="M28 37q4 3.4 8 0" stroke="#a86a3c" stroke-width="1.7" fill="none" stroke-linecap="round"/></svg></div>
+            <div style="flex:1"><div style="font-size:14px;color:#6B7280">A listener from Jaipur felt you were</div><div style="font-size:22px;font-weight:600;color:#7C3AED;margin-top:2px">Genuine</div></div>
+          </div>
+          <div class="wd" style="animation-delay:.3s;background:#fff;border-radius:18px;padding:20px;display:flex;align-items:center;gap:16px;box-shadow:0 4px 18px rgba(124,58,237,.08)">
+            <div style="width:52px;height:52px;border-radius:50%;overflow:hidden;flex:none"><svg viewBox="0 0 64 64" width="52" height="52"><rect width="64" height="64" rx="32" fill="#5a3a18"/><path d="M12 52q-3-40 20-40t20 40q1-14-3-26t-17-13-17 13-3 26Z" fill="#2a1810"/><circle cx="32" cy="50" r="22" fill="#E8B088"/><circle cx="32" cy="33" r="14" fill="#F2BE92"/><path d="M18 30q2-16 14-16t14 16q1-10-3-15t-11-5-11 5-3 15Z" fill="#2a1810"/><circle cx="27" cy="33" r="1.7" fill="#2a1810"/><circle cx="37" cy="33" r="1.7" fill="#2a1810"/><path d="M28 38q4 3 8 0" stroke="#c07a52" stroke-width="1.7" fill="none" stroke-linecap="round"/></svg></div>
+            <div style="flex:1"><div style="font-size:14px;color:#6B7280">A listener from Indore felt</div><div style="font-size:22px;font-weight:600;color:#7C3AED;margin-top:2px">Understood</div></div>
+          </div>
+        </div>
+        <div style="margin-top:auto;padding:0 22px 42px">
+          <div style="background:linear-gradient(90deg,#7C3AED,#A855F7);border-radius:12px;padding:17px;text-align:center;font-size:16px;font-weight:600;color:#fff;box-shadow:0 10px 30px rgba(124,58,237,.35)">Talk to someone tonight →</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ FEATURE 4 ============ -->
+  <div style="margin-top:64px">
+    <div style="display:flex;align-items:baseline;gap:14px"><span style="font-size:13px;font-weight:700;letter-spacing:.14em;color:#7C3AED">FEATURE 04</span><h2 style="font-size:24px;font-weight:700;letter-spacing:-0.01em;color:#1a1523">Virtual gifting - Indian cultural gifts</h2></div>
+    <p style="font-size:14px;color:#6B7280;max-width:720px;margin:6px 0 26px;line-height:1.5">Warm and celebratory, never a store. Each gift costs coins and triggers a brief 1.5s delight visible to both parties.</p>
+  </div>
+  <div style="display:flex;gap:40px;align-items:flex-start">
+
+    <!-- 4A -->
+    <div style="flex:none;width:390px">
+      <div style="font-size:13px;font-weight:600;color:#52525B;margin-bottom:10px">A · In-call gift drawer (Chai selected, bouncing)</div>
+      <div style="width:390px;height:800px;border-radius:42px;overflow:hidden;background:#0f0a1f;box-shadow:0 14px 44px rgba(0,0,0,.28);color:#fff;display:flex;flex-direction:column">
+        <div style="padding:56px 24px 0;flex:1;display:flex;flex-direction:column;align-items:center">
+          <div style="width:96px;height:96px;border-radius:50%;overflow:hidden"><svg viewBox="0 0 64 64" width="96" height="96"><rect width="64" height="64" rx="32" fill="#3a2a63"/><circle cx="32" cy="50" r="23" fill="#E0A878"/><circle cx="32" cy="32" r="15" fill="#EBB484"/><path d="M16 31q0-19 16-19t16 19q1-9-4-15t-12-6-12 6-4 15Z" fill="#241a10"/><circle cx="27" cy="32" r="1.7" fill="#241a10"/><circle cx="37" cy="32" r="1.7" fill="#241a10"/><path d="M28 37q4 3.4 8 0" stroke="#a86a3c" stroke-width="1.7" fill="none" stroke-linecap="round"/></svg></div>
+          <div style="font-size:19px;font-weight:600;margin-top:16px">SilentPanda</div>
+          <div style="font-size:14px;color:#10B981;margin-top:4px">● 12:04 · on call</div>
+        </div>
+        <div style="background:#1a1330;border-radius:30px 30px 0 0;padding:22px 20px 34px;border-top:1px solid rgba(255,255,255,.08)">
+          <div style="width:40px;height:4px;border-radius:2px;background:rgba(255,255,255,.25);margin:0 auto 18px"></div>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:18px"><span style="font-size:16px;font-weight:600">Send a little warmth</span><span style="display:flex;align-items:center;gap:6px;font-size:14px;font-weight:600;color:#F59E0B"><svg viewBox="0 0 24 24" width="15" height="15"><circle cx="12" cy="12" r="10" fill="#F5C518"/><circle cx="12" cy="12" r="7" fill="none" stroke="#C8910A" stroke-width="1.4"/><path d="M9.5 8.2h5M9.5 11h5M13 8.2c1.6 1.4 0 3.2-2.2 3.2L14 15" stroke="#8a6200" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>240</span></div>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px">
+            <div style="background:rgba(245,158,11,.14);border:1.5px solid #F59E0B;border-radius:16px;padding:14px 8px;text-align:center;animation:dbounce 1s ease-in-out infinite"><svg viewBox="0 0 32 32" width="30" height="30"><path d="M6 12h17v5a7 7 0 0 1-7 7h-3a7 7 0 0 1-7-7z" fill="#C97B3C"/><path d="M23 13h2.5a3 3 0 0 1 0 6H23" fill="none" stroke="#C97B3C" stroke-width="2"/><path d="M10 9c0-2 2-2 2-4M15 9c0-2 2-2 2-4" stroke="#F0C49B" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg><div style="font-size:12px;font-weight:500;margin-top:6px">Chai</div><div style="font-size:12px;font-weight:600;color:#F59E0B;margin-top:2px">10</div></div>
+            <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:14px 8px;text-align:center"><svg viewBox="0 0 32 32" width="30" height="30"><circle cx="16" cy="12" r="7" fill="#E0356B"/><path d="M16 7a5 5 0 0 1 0 10z" fill="#C42257"/><path d="M16 18v9M16 22l-5-3M16 24l5-3" stroke="#2E7D4F" stroke-width="2" fill="none" stroke-linecap="round"/></svg><div style="font-size:12px;font-weight:500;margin-top:6px">Rose</div><div style="font-size:12px;font-weight:600;color:#F59E0B;margin-top:2px">25</div></div>
+            <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:14px 8px;text-align:center"><svg viewBox="0 0 32 32" width="30" height="30"><circle cx="16" cy="17" r="9" fill="#E8A23D"/><circle cx="12" cy="14" r="1.3" fill="#C97B1C"/><circle cx="18" cy="13" r="1.3" fill="#C97B1C"/><circle cx="16" cy="19" r="1.3" fill="#C97B1C"/><circle cx="20" cy="18" r="1.3" fill="#C97B1C"/></svg><div style="font-size:12px;font-weight:500;margin-top:6px">Mithai</div><div style="font-size:12px;font-weight:600;color:#F59E0B;margin-top:2px">40</div></div>
+            <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:14px 8px;text-align:center"><svg viewBox="0 0 32 32" width="30" height="30"><path d="M6 18q10 6 20 0z" fill="#A85E22"/><path d="M11 15c-1.5 0-1.5 3 5 3s5-3 3.5-3z" fill="#C97B3C"/><path d="M16 14c0-3 2-3 0-7-2 4 0 4 0 7z" fill="#F5A623"/><path d="M16 13c0-2 1-2 0-4-1 2 0 2 0 4z" fill="#FFD36E"/></svg><div style="font-size:12px;font-weight:500;margin-top:6px">Diya</div><div style="font-size:12px;font-weight:600;color:#F59E0B;margin-top:2px">60</div></div>
+            <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:14px 8px;text-align:center"><svg viewBox="0 0 32 32" width="30" height="30"><path d="M8 16a5 5 0 1 1 8 0 5 5 0 1 0 8 0" fill="none" stroke="#E0356B" stroke-width="3" stroke-linecap="round"/></svg><div style="font-size:12px;font-weight:500;margin-top:6px">Bandhan</div><div style="font-size:12px;font-weight:600;color:#F59E0B;margin-top:2px">100</div></div>
+            <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:14px 8px;text-align:center"><svg viewBox="0 0 32 32" width="30" height="30"><path d="M16 4l2.2 7.8L26 14l-7.8 2.2L16 24l-2.2-7.8L6 14l7.8-2.2z" fill="#C8A2F0"/><circle cx="24" cy="23" r="1.8" fill="#E9D8FF"/></svg><div style="font-size:12px;font-weight:500;margin-top:6px">Blessing</div><div style="font-size:12px;font-weight:600;color:#F59E0B;margin-top:2px">150</div></div>
+          </div>
+          <div style="background:linear-gradient(90deg,#7C3AED,#A855F7);border-radius:12px;padding:16px;text-align:center;font-size:16px;font-weight:600;margin-top:18px;box-shadow:0 10px 26px rgba(124,58,237,.4);display:flex;align-items:center;justify-content:center;gap:9px">Send Chai <svg viewBox="0 0 32 32" width="20" height="20"><path d="M6 12h17v5a7 7 0 0 1-7 7h-3a7 7 0 0 1-7-7z" fill="#fff"/><path d="M23 13h2.5a3 3 0 0 1 0 6H23" fill="none" stroke="#fff" stroke-width="2"/></svg></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4B -->
+    <div style="flex:none;width:390px">
+      <div style="font-size:13px;font-weight:600;color:#52525B;margin-bottom:10px">B · Gift sent - 1.5s overlay (Chai)</div>
+      <div style="width:390px;height:800px;border-radius:42px;overflow:hidden;background:radial-gradient(110% 70% at 50% 42%,#7c4a12 0%,#3a230a 50%,#180e04 100%);box-shadow:0 14px 44px rgba(0,0,0,.28);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative">
+        <div style="position:relative;display:flex;flex-direction:column;align-items:center">
+          <div style="position:absolute;top:-22px;display:flex;gap:9px">
+            <div style="width:6px;height:24px;border-radius:3px;background:rgba(255,255,255,.5);filter:blur(2px);animation:dsteam 1.5s ease-in-out infinite"></div>
+            <div style="width:6px;height:24px;border-radius:3px;background:rgba(255,255,255,.5);filter:blur(2px);animation:dsteam 1.5s ease-in-out .3s infinite"></div>
+            <div style="width:6px;height:24px;border-radius:3px;background:rgba(255,255,255,.5);filter:blur(2px);animation:dsteam 1.5s ease-in-out .15s infinite"></div>
+          </div>
+          <div style="animation:dfloat 1.5s ease-in-out infinite"><svg viewBox="0 0 32 32" width="96" height="96"><path d="M6 12h17v5a7 7 0 0 1-7 7h-3a7 7 0 0 1-7-7z" fill="#E8A05A"/><path d="M23 13h3a3.5 3.5 0 0 1 0 7h-3" fill="none" stroke="#E8A05A" stroke-width="2.2"/></svg></div>
+        </div>
+        <div style="font-size:24px;font-weight:600;margin-top:28px">You sent a Chai</div>
+        <div style="font-size:15px;color:#fcd9a8;margin-top:8px;text-align:center;padding:0 50px;line-height:1.5">A little warmth for SilentPanda.</div>
+        <div style="display:flex;align-items:center;gap:8px;margin-top:30px;background:rgba(0,0,0,.3);border-radius:999px;padding:9px 18px;font-size:14px;font-weight:600;color:#F59E0B"><svg viewBox="0 0 24 24" width="15" height="15"><circle cx="12" cy="12" r="10" fill="#F5C518"/><circle cx="12" cy="12" r="7" fill="none" stroke="#C8910A" stroke-width="1.4"/><path d="M9.5 8.2h5M9.5 11h5M13 8.2c1.6 1.4 0 3.2-2.2 3.2L14 15" stroke="#8a6200" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>240 → 230</div>
+      </div>
+    </div>
+
+    <!-- 4C -->
+    <div style="flex:none;width:390px">
+      <div style="font-size:13px;font-weight:600;color:#52525B;margin-bottom:10px">C · Listener receives - toast on call screen</div>
+      <div style="width:390px;height:800px;border-radius:42px;overflow:hidden;background:#0f0a1f;box-shadow:0 14px 44px rgba(0,0,0,.28);color:#fff;display:flex;flex-direction:column;align-items:center">
+        <div style="width:100%;padding:18px 18px 0">
+          <div class="wd" style="background:linear-gradient(90deg,rgba(245,158,11,.22),rgba(245,158,11,.1));border:1px solid rgba(245,158,11,.5);border-radius:16px;padding:14px 18px;display:flex;align-items:center;gap:12px">
+            <div><svg viewBox="0 0 32 32" width="26" height="26"><path d="M6 12h17v5a7 7 0 0 1-7 7h-3a7 7 0 0 1-7-7z" fill="#E8A05A"/><path d="M23 13h2.5a3 3 0 0 1 0 6H23" fill="none" stroke="#E8A05A" stroke-width="2"/></svg></div>
+            <div style="font-size:15px;font-weight:500;line-height:1.4">You received a Chai from your caller</div>
+          </div>
+        </div>
+        <div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center">
+          <div style="width:96px;height:96px;border-radius:50%;overflow:hidden"><svg viewBox="0 0 64 64" width="96" height="96"><rect width="64" height="64" rx="32" fill="#4a2a5e"/><path d="M12 52q-3-40 20-40t20 40q1-14-3-26t-17-13-17 13-3 26Z" fill="#2a1810"/><circle cx="32" cy="50" r="22" fill="#E8B088"/><circle cx="32" cy="33" r="14" fill="#F2BE92"/><path d="M18 30q2-16 14-16t14 16q1-10-3-15t-11-5-11 5-3 15Z" fill="#2a1810"/><circle cx="27" cy="33" r="1.7" fill="#2a1810"/><circle cx="37" cy="33" r="1.7" fill="#2a1810"/><path d="M28 38q4 3 8 0" stroke="#c07a52" stroke-width="1.7" fill="none" stroke-linecap="round"/></svg></div>
+          <div style="font-size:19px;font-weight:600;margin-top:16px">Caller · GentleRain</div>
+          <div style="font-size:14px;color:#10B981;margin-top:4px">● 12:04 · on call</div>
+        </div>
+        <div style="padding-bottom:54px;display:flex;gap:22px">
+          <div style="width:62px;height:62px;border-radius:50%;background:#1a1330;border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 9v3a3 3 0 0 0 5.1 2.1M15 9.3V5a3 3 0 0 0-6 0M12 18v3M2 2l20 20"/></svg></div>
+          <div style="width:62px;height:62px;border-radius:50%;background:#ef4444;display:flex;align-items:center;justify-content:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round"><path d="M3 10.5c5-4 13-4 18 0l-2.5 3.2-3.6-1.2v-2.2c-2.2-.8-4-0.8-6 0v2.2L5.5 13.7z" fill="#fff" stroke="none"/></svg></div>
+          <div style="width:62px;height:62px;border-radius:50%;background:#1a1330;border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H2v6h4l5 4z"/><path d="M16 9a4 4 0 0 1 0 6M19 7a8 8 0 0 1 0 10"/></svg></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ FEATURE 5 ============ -->
+  <div style="margin-top:64px">
+    <div style="display:flex;align-items:baseline;gap:14px"><span style="font-size:13px;font-weight:700;letter-spacing:.14em;color:#7C3AED">FEATURE 05</span><h2 style="font-size:24px;font-weight:700;letter-spacing:-0.01em;color:#1a1523">9 PM ritual + listener signal</h2></div>
+    <p style="font-size:14px;color:#6B7280;max-width:720px;margin:6px 0 26px;line-height:1.5">The evening state feels warmer and darker. A nightly nudge anchored to India's highest emotional window, with a favourite listener's live status.</p>
+  </div>
+  <div style="display:flex;gap:40px;align-items:flex-start">
+
+    <!-- 5A -->
+    <div style="flex:none;width:390px">
+      <div style="font-size:13px;font-weight:600;color:#52525B;margin-bottom:10px">A · 9 PM push (returning user - has favourite)</div>
+      <div style="width:390px;height:800px;border-radius:42px;overflow:hidden;background:linear-gradient(170deg,#2a1d52,#120c2a 75%);box-shadow:0 14px 44px rgba(0,0,0,.28);color:#fff">
+        <div style="padding-top:78px;text-align:center;font-size:15px;color:#d9cff0;font-weight:500">Sunday, 22 June</div>
+        <div style="font-size:80px;font-weight:300;text-align:center;margin-top:2px;letter-spacing:-.02em">9:00</div>
+        <div style="padding:56px 16px 0">
+          <div style="background:rgba(255,255,255,.14);backdrop-filter:blur(20px);border-radius:22px;padding:16px;display:flex;gap:13px;align-items:flex-start">
+            <div style="width:40px;height:40px;border-radius:10px;background:#fff;display:flex;align-items:center;justify-content:center"><svg viewBox="0 0 64 64" width="26" height="26"><path d="M32 6c-12 0-20 9-20 21v25c0 2.4 2.8 3.6 4.6 2L22 49l5 4 5-4 5 4 5-4 5.4 5c1.8 1.6 4.6.4 4.6-2V27C52 15 44 6 32 6Z" fill="#7C3AED"/><circle cx="25" cy="27" r="3.4" fill="#fff"/><circle cx="39" cy="27" r="3.4" fill="#fff"/></svg></div>
+            <div style="flex:1">
+              <div style="display:flex;justify-content:space-between"><span style="font-size:14px;font-weight:600">Dostt</span><span style="font-size:12px;color:#cdbff2">now</span></div>
+              <div style="font-size:15px;font-weight:600;margin-top:3px;display:flex;align-items:center;gap:6px">Good evening.<svg viewBox="0 0 64 64" width="15" height="15"><path d="M32 6c-12 0-20 9-20 21v25c0 2.4 2.8 3.6 4.6 2L22 49l5 4 5-4 5 4 5-4 5.4 5c1.8 1.6 4.6.4 4.6-2V27C52 15 44 6 32 6Z" fill="#fff"/><circle cx="25" cy="27" r="3.4" fill="#2D1B69"/><circle cx="39" cy="27" r="3.4" fill="#2D1B69"/></svg></div>
+              <div style="font-size:14px;color:#e3dbf5;margin-top:2px;line-height:1.42">47 people are talking on Dostt right now. Priya is online - she's here if you need her.</div>
+            </div>
+          </div>
+        </div>
+        <div style="padding:18px 30px 0;text-align:center;font-size:13px;color:#8a7db8;line-height:1.5">New user has no favourite - body reads:<br><span style="color:#cdbff2;font-style:italic">"What are you carrying tonight?"</span></div>
+        <div style="position:relative;margin-top:300px;display:flex;justify-content:center"><div style="width:134px;height:5px;border-radius:3px;background:rgba(255,255,255,.4)"></div></div>
+      </div>
+    </div>
+
+    <!-- 5B -->
+    <div style="flex:none;width:390px">
+      <div style="font-size:13px;font-weight:600;color:#52525B;margin-bottom:10px">B · Home at 9 PM - "Tonight" banner</div>
+      <div style="width:390px;height:800px;border-radius:42px;overflow:hidden;background:#0c0818;box-shadow:0 14px 44px rgba(0,0,0,.28);color:#fff;display:flex;flex-direction:column">
+        <div style="padding:54px 20px 0;display:flex;align-items:center;justify-content:space-between">
+          <div style="display:flex;align-items:center;gap:9px"><span style="display:flex;align-items:center;gap:8px;font-size:22px;font-weight:700"><svg viewBox="0 0 64 64" width="26" height="26" style="flex:none"><path d="M32 6c-12 0-20 9-20 21v25c0 2.4 2.8 3.6 4.6 2L22 49l5 4 5-4 5 4 5-4 5.4 5c1.8 1.6 4.6.4 4.6-2V27C52 15 44 6 32 6Z" fill="#fff"/><circle cx="25" cy="27" r="3.4" fill="#2D1B69"/><circle cx="39" cy="27" r="3.4" fill="#2D1B69"/></svg>dostt</span></div>
+          <div style="display:flex;align-items:center;gap:7px;background:#1a1330;border-radius:999px;padding:7px 14px;font-size:14px;font-weight:600;color:#F59E0B"><svg viewBox="0 0 24 24" width="15" height="15"><circle cx="12" cy="12" r="10" fill="#F5C518"/><circle cx="12" cy="12" r="7" fill="none" stroke="#C8910A" stroke-width="1.4"/><path d="M9.5 8.2h5M9.5 11h5M13 8.2c1.6 1.4 0 3.2-2.2 3.2L14 15" stroke="#8a6200" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>240</div>
+        </div>
+        <div style="padding:20px 20px 0">
+          <div style="background:linear-gradient(150deg,#2D1B69,#7C3AED);border-radius:24px;padding:22px;position:relative;overflow:hidden;box-shadow:0 10px 30px rgba(124,58,237,.4)">
+            <div style="font-size:12px;font-weight:600;letter-spacing:.14em;color:#e9d8ff">TONIGHT</div>
+            <div style="display:flex;align-items:center;gap:8px;margin-top:10px">
+              <div style="width:9px;height:9px;border-radius:50%;background:#F59E0B;animation:ddot 1.6s ease-in-out infinite"></div>
+              <span style="font-size:17px;font-weight:600;color:#F59E0B">47 people talking now</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:12px;margin-top:16px;background:rgba(0,0,0,.22);border-radius:16px;padding:12px 14px">
+              <div style="position:relative;width:46px;height:46px"><div style="width:46px;height:46px;border-radius:50%;overflow:hidden"><svg viewBox="0 0 64 64" width="46" height="46"><rect width="64" height="64" rx="32" fill="#4a2a5e"/><path d="M12 52q-3-40 20-40t20 40q1-14-3-26t-17-13-17 13-3 26Z" fill="#2a1810"/><circle cx="32" cy="50" r="22" fill="#E8B088"/><circle cx="32" cy="33" r="14" fill="#F2BE92"/><path d="M18 30q2-16 14-16t14 16q1-10-3-15t-11-5-11 5-3 15Z" fill="#2a1810"/><circle cx="27" cy="33" r="1.7" fill="#2a1810"/><circle cx="37" cy="33" r="1.7" fill="#2a1810"/><path d="M28 38q4 3 8 0" stroke="#c07a52" stroke-width="1.7" fill="none" stroke-linecap="round"/></svg></div><div style="position:absolute;bottom:0;right:0;width:13px;height:13px;border-radius:50%;background:#10B981;border:2px solid #2D1B69;animation:ddot 1.6s ease-in-out infinite"></div></div>
+              <div style="flex:1"><div style="font-size:15px;font-weight:600">Priya is online</div><div style="font-size:13px;color:#d9cff0">Your favourite · here if you need her</div></div>
+            </div>
+            <div style="background:#fff;color:#7C3AED;border-radius:12px;padding:14px;text-align:center;font-size:16px;font-weight:600;margin-top:16px">Talk tonight →</div>
+          </div>
+        </div>
+        <div style="padding:24px 20px 0;font-size:13px;font-weight:600;letter-spacing:.1em;color:#8a7db8">TONIGHT'S TOPIC</div>
+        <div style="padding:12px 20px 0">
+          <div style="border-radius:20px;overflow:hidden;background:#16101f;border:1px solid rgba(255,255,255,.07)">
+            <div style="height:150px;background:linear-gradient(150deg,#3a2a5e,#241640);display:flex;align-items:center;justify-content:center"><svg viewBox="0 0 32 32" width="50" height="50"><path d="M22 6a11 11 0 1 0 4 12 9 9 0 0 1-4-12z" fill="#E9D8FF"/></svg></div>
+            <div style="padding:16px"><div style="font-size:18px;font-weight:600">The things we don't say to family</div><div style="font-size:13px;color:#9d8fce;margin-top:4px">A gentle place to start tonight</div></div>
+          </div>
+        </div>
+        <div style="margin-top:auto;background:#0a0613;border-top:1px solid rgba(255,255,255,.06);padding:14px 4px 30px;display:flex;justify-content:space-around;font-size:11px">
+          <div style="display:flex;flex-direction:column;align-items:center;gap:6px;color:#fff"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V20a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V9.5"/><path d="M9.5 21v-6h5v6"/></svg>Home</div>
+          <div style="display:flex;flex-direction:column;align-items:center;gap:6px;color:#7C6da0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5z"/></svg>Discover</div>
+          <div style="display:flex;flex-direction:column;align-items:center;gap:6px;color:#A855F7"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3h5v5"/><path d="M4 20 21 3"/><path d="M21 16v5h-5"/><path d="m15 15 6 6"/><path d="M4 4l5 5"/></svg>Match</div>
+          <div style="display:flex;flex-direction:column;align-items:center;gap:6px;color:#7C6da0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>Recents</div>
+          <div style="display:flex;flex-direction:column;align-items:center;gap:6px;color:#7C6da0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M5 21c0-3.5 3.1-6 7-6s7 2.5 7 6"/></svg>You</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5C -->
+    <div style="flex:none;width:390px">
+      <div style="font-size:13px;font-weight:600;color:#52525B;margin-bottom:10px">C · Live availability badges on listener cards</div>
+      <div style="width:390px;height:800px;border-radius:42px;overflow:hidden;background:#0c0818;box-shadow:0 14px 44px rgba(0,0,0,.28);color:#fff;display:flex;flex-direction:column">
+        <div style="padding:54px 20px 18px;font-size:18px;font-weight:600">Listeners for you</div>
+        <div style="padding:0 20px;display:flex;flex-direction:column;gap:12px">
+          <!-- online -->
+          <div style="background:#16101f;border:1px solid rgba(255,255,255,.07);border-radius:20px;padding:16px;display:flex;align-items:center;gap:14px">
+            <div style="position:relative;width:58px;height:58px;flex:none"><div style="width:58px;height:58px;border-radius:50%;overflow:hidden"><svg viewBox="0 0 64 64" width="58" height="58"><rect width="64" height="64" rx="32" fill="#4a2a5e"/><path d="M12 52q-3-40 20-40t20 40q1-14-3-26t-17-13-17 13-3 26Z" fill="#2a1810"/><circle cx="32" cy="50" r="22" fill="#E8B088"/><circle cx="32" cy="33" r="14" fill="#F2BE92"/><path d="M18 30q2-16 14-16t14 16q1-10-3-15t-11-5-11 5-3 15Z" fill="#2a1810"/><circle cx="27" cy="33" r="1.7" fill="#2a1810"/><circle cx="37" cy="33" r="1.7" fill="#2a1810"/><path d="M28 38q4 3 8 0" stroke="#c07a52" stroke-width="1.7" fill="none" stroke-linecap="round"/></svg></div><div style="position:absolute;bottom:1px;right:1px;width:15px;height:15px;border-radius:50%;background:#10B981;border:2.5px solid #16101f;animation:ddot 1.6s ease-in-out infinite"></div></div>
+            <div style="flex:1"><div style="font-size:16px;font-weight:600">Priya</div><div style="display:flex;align-items:center;gap:6px;font-size:13px;color:#10B981;margin-top:2px">● Online now</div><div style="font-size:12px;color:#9d8fce;margin-top:3px">Family · Heartbreak · ₹1/min</div></div>
+            <div style="width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,#7C3AED,#A855F7);display:flex;align-items:center;justify-content:center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg></div>
+          </div>
+          <!-- online -->
+          <div style="background:#16101f;border:1px solid rgba(255,255,255,.07);border-radius:20px;padding:16px;display:flex;align-items:center;gap:14px">
+            <div style="position:relative;width:58px;height:58px;flex:none"><div style="width:58px;height:58px;border-radius:50%;overflow:hidden"><svg viewBox="0 0 64 64" width="58" height="58"><rect width="64" height="64" rx="32" fill="#5a3a18"/><circle cx="32" cy="50" r="23" fill="#E0A878"/><circle cx="32" cy="32" r="15" fill="#EBB484"/><path d="M16 31q0-19 16-19t16 19q1-9-4-15t-12-6-12 6-4 15Z" fill="#241a10"/><circle cx="27" cy="32" r="1.7" fill="#241a10"/><circle cx="37" cy="32" r="1.7" fill="#241a10"/><path d="M28 37q4 3.4 8 0" stroke="#a86a3c" stroke-width="1.7" fill="none" stroke-linecap="round"/></svg></div><div style="position:absolute;bottom:1px;right:1px;width:15px;height:15px;border-radius:50%;background:#10B981;border:2.5px solid #16101f;animation:ddot 1.6s ease-in-out infinite"></div></div>
+            <div style="flex:1"><div style="font-size:16px;font-weight:600">Arjun</div><div style="display:flex;align-items:center;gap:6px;font-size:13px;color:#10B981;margin-top:2px">● Online now</div><div style="font-size:12px;color:#9d8fce;margin-top:3px">Career · Anxiety · ₹1/min</div></div>
+            <div style="width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,#7C3AED,#A855F7);display:flex;align-items:center;justify-content:center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg></div>
+          </div>
+          <!-- away -->
+          <div style="background:#16101f;border:1px solid rgba(255,255,255,.07);border-radius:20px;padding:16px;display:flex;align-items:center;gap:14px;opacity:.62">
+            <div style="position:relative;width:58px;height:58px;flex:none"><div style="width:58px;height:58px;border-radius:50%;overflow:hidden"><svg viewBox="0 0 64 64" width="58" height="58"><rect width="64" height="64" rx="32" fill="#3a3540"/><path d="M12 52q-3-40 20-40t20 40q1-14-3-26t-17-13-17 13-3 26Z" fill="#2b2620"/><circle cx="32" cy="50" r="22" fill="#D8A880"/><circle cx="32" cy="33" r="14" fill="#E4B68C"/><path d="M18 30q2-16 14-16t14 16q1-10-3-15t-11-5-11 5-3 15Z" fill="#2b2620"/><circle cx="27" cy="33" r="1.7" fill="#2b2620"/><circle cx="37" cy="33" r="1.7" fill="#2b2620"/><path d="M28 38q4 3 8 0" stroke="#b07a52" stroke-width="1.7" fill="none" stroke-linecap="round"/></svg></div><div style="position:absolute;bottom:1px;right:1px;width:15px;height:15px;border-radius:50%;background:#6B7280;border:2.5px solid #16101f"></div></div>
+            <div style="flex:1"><div style="font-size:16px;font-weight:600">Meera</div><div style="display:flex;align-items:center;gap:6px;font-size:13px;color:#9CA3AF;margin-top:2px">● Away</div><div style="font-size:12px;color:#6B7280;margin-top:3px">Loneliness · Sleep · ₹1/min</div></div>
+            <div style="width:42px;height:42px;border-radius:50%;background:#232328;display:flex;align-items:center;justify-content:center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#cbb9ee" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9M13.7 21a2 2 0 0 1-3.4 0"/></svg></div>
+          </div>
+        </div>
+        <div style="padding:20px;font-size:12px;color:#52456e;line-height:1.5">Green dot pulses slowly on live listeners. Away listeners dim and swap Call for a "Notify me" bell.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ FEATURE 6 ============ -->
+  <div style="margin-top:64px">
+    <div style="display:flex;align-items:baseline;gap:14px"><span style="font-size:13px;font-weight:700;letter-spacing:.14em;color:#7C3AED">FEATURE 06</span><h2 style="font-size:24px;font-weight:700;letter-spacing:-0.01em;color:#1a1523">Random match - "Surprise me"</h2></div>
+    <p style="font-size:14px;color:#6B7280;max-width:720px;margin:6px 0 26px;line-height:1.5">For the nights you don't know who to talk to. One tap drops you into a warm, anonymous call with someone who's open right now - no scrolling, no choosing.</p>
+  </div>
+  <div style="display:flex;gap:40px;align-items:flex-start">
+
+    <!-- 6A -->
+    <div style="flex:none;width:390px">
+      <div style="font-size:13px;font-weight:600;color:#52525B;margin-bottom:10px">A · Entry card on Discover</div>
+      <div style="width:390px;height:800px;border-radius:42px;overflow:hidden;background:#0c0818;box-shadow:0 14px 44px rgba(0,0,0,.28);color:#fff;display:flex;flex-direction:column">
+        <div style="padding:54px 20px 0;font-size:18px;font-weight:600">Discover</div>
+        <div style="padding:20px 20px 0">
+          <div style="border-radius:24px;padding:28px 24px;background:linear-gradient(150deg,#2D1B69,#7C3AED);box-shadow:0 12px 34px rgba(124,58,237,.45);position:relative;overflow:hidden">
+            <div style="position:absolute;top:-18px;right:-10px;opacity:.18"><svg viewBox="0 0 64 64" width="150" height="150"><path d="M32 6c-12 0-20 9-20 21v25c0 2.4 2.8 3.6 4.6 2L22 49l5 4 5-4 5 4 5-4 5.4 5c1.8 1.6 4.6.4 4.6-2V27C52 15 44 6 32 6Z" fill="#fff"/></svg></div>
+            <div style="font-size:12px;font-weight:600;letter-spacing:.14em;color:#e9d8ff">FEELING UNSURE?</div>
+            <div style="font-size:25px;font-weight:600;line-height:1.32;margin-top:12px;position:relative">Let us find someone who gets it.</div>
+            <div style="font-size:14px;color:#e3dbf5;margin-top:10px;line-height:1.5;position:relative">We'll connect you with a listener who's open right now. No names, no scrolling - just a voice.</div>
+            <div style="background:#fff;color:#7C3AED;border-radius:12px;padding:15px;text-align:center;font-size:16px;font-weight:600;margin-top:22px;display:flex;align-items:center;justify-content:center;gap:9px;position:relative"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3h5v5"/><path d="M4 20 21 3"/><path d="M21 16v5h-5"/><path d="m15 15 6 6"/><path d="M4 4l5 5"/></svg>Surprise me</div>
+          </div>
+        </div>
+        <div style="padding:24px 20px 0;font-size:13px;color:#9d8fce;line-height:1.5">Pick what's on your mind first - or skip, and we'll match you with anyone kind.</div>
+        <div style="padding:14px 20px 0;display:flex;flex-wrap:wrap;gap:10px">
+          <span style="font-size:13px;color:#fff;border:1px solid #7C3AED;background:rgba(124,58,237,.18);border-radius:999px;padding:9px 15px">Anything tonight</span>
+          <span style="font-size:13px;color:#cbb9ee;border:1px solid rgba(255,255,255,.14);border-radius:999px;padding:9px 15px">Family</span>
+          <span style="font-size:13px;color:#cbb9ee;border:1px solid rgba(255,255,255,.14);border-radius:999px;padding:9px 15px">Heartbreak</span>
+          <span style="font-size:13px;color:#cbb9ee;border:1px solid rgba(255,255,255,.14);border-radius:999px;padding:9px 15px">Just lonely</span>
+          <span style="font-size:13px;color:#cbb9ee;border:1px solid rgba(255,255,255,.14);border-radius:999px;padding:9px 15px">Can't sleep</span>
+        </div>
+        <div style="margin-top:auto;padding:0 20px 36px;font-size:12px;color:#52456e;line-height:1.5">Matching is free - coins apply only once your call connects, at ₹1/min.</div>
+      </div>
+    </div>
+
+    <!-- 6B -->
+    <div style="flex:none;width:390px">
+      <div style="font-size:13px;font-weight:600;color:#52525B;margin-bottom:10px">B · Matching - avatars orbit, mascot pulses</div>
+      <div style="width:390px;height:800px;border-radius:42px;overflow:hidden;background:radial-gradient(120% 80% at 50% 38%,#3a2280 0%,#1c1242 55%,#120a2c 100%);box-shadow:0 14px 44px rgba(0,0,0,.28);color:#fff;display:flex;flex-direction:column;align-items:center">
+        <div style="padding-top:60px;display:flex;align-items:center;justify-content:space-between;width:100%;padding-left:22px;padding-right:22px"><span style="font-size:24px">‹</span><span style="font-size:13px;color:#C4B5FD;letter-spacing:.05em">Finding your match</span><span style="width:24px"></span></div>
+        <div style="position:relative;width:240px;height:240px;margin-top:74px;display:flex;align-items:center;justify-content:center">
+          <div style="position:absolute;width:240px;height:240px;border-radius:50%;border:1px dashed rgba(196,181,253,.3);animation:dspin 16s linear infinite"></div>
+          <div style="position:absolute;width:170px;height:170px;border-radius:50%;border:1px dashed rgba(196,181,253,.22)"></div>
+          <div style="position:absolute;width:240px;height:240px;animation:dspin 9s linear infinite">
+            <div style="position:absolute;top:-3px;left:50%;transform:translateX(-50%);width:48px;height:48px;border-radius:50%;overflow:hidden"><svg viewBox="0 0 64 64" width="48" height="48"><rect width="64" height="64" rx="32" fill="#3a2a63"/><circle cx="32" cy="48" r="24" fill="#E8B68A"/><circle cx="32" cy="31" r="15" fill="#F0C49B"/><path d="M16 30q0-19 16-19t16 19q1-9-4-15t-12-6-12 6-4 15Z" fill="#2b1c12"/><circle cx="27" cy="31" r="1.6" fill="#2b1c12"/><circle cx="37" cy="31" r="1.6" fill="#2b1c12"/><path d="M28 36q4 3 8 0" stroke="#b9794a" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg></div>
+            <div style="position:absolute;bottom:-3px;left:50%;transform:translateX(-50%);width:48px;height:48px;border-radius:50%;overflow:hidden"><svg viewBox="0 0 64 64" width="48" height="48"><rect width="64" height="64" rx="32" fill="#5a3a18"/><circle cx="32" cy="48" r="24" fill="#C68A5A"/><circle cx="32" cy="31" r="15" fill="#D89A66"/><path d="M17 28q3-17 15-17t15 17q2-7-1-13t-14-7-14 7-1 13Z" fill="#1c1208"/><circle cx="27" cy="31" r="1.6" fill="#1c1208"/><circle cx="37" cy="31" r="1.6" fill="#1c1208"/><path d="M28 36q4 3 8 0" stroke="#8a5a32" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg></div>
+            <div style="position:absolute;left:-3px;top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:50%;overflow:hidden"><svg viewBox="0 0 64 64" width="48" height="48"><rect width="64" height="64" rx="32" fill="#1f5040"/><circle cx="32" cy="48" r="24" fill="#EAB892"/><circle cx="32" cy="31" r="15" fill="#F2C7A0"/><path d="M16 32q-1-21 16-21t16 21q3-10-2-17t-14-6-14 6-2 17Z" fill="#3a2417"/><circle cx="27" cy="31" r="1.6" fill="#3a2417"/><circle cx="37" cy="31" r="1.6" fill="#3a2417"/><path d="M28 36q4 3 8 0" stroke="#b07a4a" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg></div>
+            <div style="position:absolute;right:-3px;top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:50%;overflow:hidden"><svg viewBox="0 0 64 64" width="48" height="48"><rect width="64" height="64" rx="32" fill="#3c3470"/><circle cx="32" cy="48" r="24" fill="#D89A66"/><circle cx="32" cy="31" r="15" fill="#E4A973"/><path d="M16 30q0-19 16-19t16 19q1-9-4-15t-12-6-12 6-4 15Z" fill="#14110a"/><circle cx="27" cy="31" r="1.6" fill="#14110a"/><circle cx="37" cy="31" r="1.6" fill="#14110a"/><path d="M28 36q4 3 8 0" stroke="#9a6a3a" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg></div>
+          </div>
+          <div style="width:96px;height:96px;border-radius:50%;background:rgba(255,255,255,.1);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;animation:dpulse 2s ease-in-out infinite"><svg viewBox="0 0 64 64" width="50" height="50"><path d="M32 6c-12 0-20 9-20 21v25c0 2.4 2.8 3.6 4.6 2L22 49l5 4 5-4 5 4 5-4 5.4 5c1.8 1.6 4.6.4 4.6-2V27C52 15 44 6 32 6Z" fill="#fff"/><circle cx="25" cy="27" r="3.4" fill="#2D1B69"/><circle cx="39" cy="27" r="3.4" fill="#2D1B69"/><circle cx="20" cy="34" r="2.4" fill="#F9C8D6" opacity=".7"/><circle cx="44" cy="34" r="2.4" fill="#F9C8D6" opacity=".7"/></svg></div>
+        </div>
+        <div style="font-size:22px;font-weight:600;margin-top:66px;text-align:center;padding:0 44px;line-height:1.4">Finding someone who's here for you…</div>
+        <div style="font-size:14px;color:#9d8fce;margin-top:12px;text-align:center;padding:0 50px;line-height:1.5">23 listeners are open right now. This usually takes a few seconds.</div>
+        <div style="margin-top:auto;padding-bottom:50px"><div style="border:1.5px solid rgba(255,255,255,.2);border-radius:12px;padding:13px 28px;font-size:15px;font-weight:600;color:#cbb9ee">Cancel</div></div>
+      </div>
+    </div>
+
+    <!-- 6C -->
+    <div style="flex:none;width:390px">
+      <div style="font-size:13px;font-weight:600;color:#52525B;margin-bottom:10px">C · Matched - success state</div>
+      <div style="width:390px;height:800px;border-radius:42px;overflow:hidden;background:radial-gradient(120% 80% at 50% 30%,#3a2280 0%,#1c1242 60%,#120a2c 100%);box-shadow:0 14px 44px rgba(0,0,0,.28);color:#fff;display:flex;flex-direction:column;align-items:center">
+        <div class="wd" style="margin-top:118px;width:108px;height:108px;border-radius:50%;overflow:hidden;box-shadow:0 0 0 8px rgba(124,58,237,.22)"><svg viewBox="0 0 64 64" width="108" height="108"><rect width="64" height="64" rx="32" fill="#3a2a63"/><circle cx="32" cy="48" r="24" fill="#E8B68A"/><circle cx="32" cy="31" r="15" fill="#F0C49B"/><path d="M16 30q0-19 16-19t16 19q1-9-4-15t-12-6-12 6-4 15Z" fill="#2b1c12"/><circle cx="27" cy="31" r="1.7" fill="#2b1c12"/><circle cx="37" cy="31" r="1.7" fill="#2b1c12"/><path d="M28 36q4 3.4 8 0" stroke="#b9794a" stroke-width="1.7" fill="none" stroke-linecap="round"/></svg></div>
+        <div style="font-size:13px;color:#9d8fce;margin-top:24px;letter-spacing:.12em">YOU'RE MATCHED WITH</div>
+        <div style="font-size:26px;font-weight:600;margin-top:8px">RaaziDil</div>
+        <div style="display:flex;align-items:center;gap:7px;margin-top:8px;font-size:14px;color:#10B981"><span style="width:8px;height:8px;border-radius:50%;background:#10B981;display:inline-block;animation:ddot 1.6s ease-in-out infinite"></span>Online now · from Lucknow</div>
+        <div style="margin-top:30px;padding:0 26px;width:100%">
+          <div style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:22px;padding:24px">
+            <div style="font-size:12px;color:#9d8fce;letter-spacing:.1em;margin-bottom:10px">YOUR SHARED PROMPT</div>
+            <div style="font-size:19px;font-weight:600;line-height:1.4">What's been on your mind that you haven't told anyone?</div>
+          </div>
+        </div>
+        <div style="margin-top:auto;padding:0 22px 50px;width:100%;display:flex;flex-direction:column;gap:12px">
+          <div style="background:linear-gradient(90deg,#7C3AED,#A855F7);border-radius:12px;padding:17px;text-align:center;font-size:16px;font-weight:600;box-shadow:0 10px 30px rgba(124,58,237,.5);display:flex;align-items:center;justify-content:center;gap:9px"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>Say hello</div>
+          <div style="text-align:center;font-size:14px;color:#9d8fce">Not feeling it? <span style="color:#cbb9ee;font-weight:600">Find someone else</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ WRITE-UP ============ -->
+  <div style="margin-top:72px;max-width:1000px">
+    <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:24px"><span style="font-size:13px;font-weight:700;letter-spacing:.14em;color:#7C3AED">SYSTEM</span><h2 style="font-size:24px;font-weight:700;letter-spacing:-0.01em;color:#1a1523">How it all works together</h2></div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
+      <div style="background:#fff;border-radius:18px;padding:26px;box-shadow:0 4px 18px rgba(0,0,0,.05)">
+        <div style="font-size:16px;font-weight:700;color:#1a1523;margin-bottom:12px">One retention loop</div>
+        <p style="font-size:14px;color:#4b5563;line-height:1.6">The five features form a single emotional loop, not five isolated nudges. The <b>ice-breaker</b> (1) makes the call itself deeper, so there's something real worth remembering. The <b>post-call message</b> (2) and <b>offline validation</b> (3) reach back out hours later with proof that the conversation mattered - pulling the user to <i>open</i> the app on their own. <b>Gifting</b> (4) deepens the bond and lifts coin spend inside the moment of connection. The <b>9 PM ritual</b> (5) then re-anchors a daily habit at India's most emotionally open hour, routing the returning user straight back into feature 1. Presence → proof → habit → presence.</p>
+      </div>
+      <div style="background:#fff;border-radius:18px;padding:26px;box-shadow:0 4px 18px rgba(0,0,0,.05)">
+        <div style="font-size:16px;font-weight:700;color:#1a1523;margin-bottom:12px">Build order - fastest impact first</div>
+        <ol style="margin:0;padding-left:18px;font-size:14px;color:#4b5563;line-height:1.7">
+          <li><b>9 PM ritual (5)</b> - pure notification + banner logic, no new call infra. Biggest DAU lever, ship first.</li>
+          <li><b>Offline validation (3)</b> - reuses push; a reaction tap for listeners is the only new write.</li>
+          <li><b>Ice-breaker (2→ here F1)</b> - one screen in the existing pre-call flow; lifts call quality immediately.</li>
+          <li><b>Post-call message (2)</b> - needs a delayed-delivery queue + inbox; medium effort, strong D7.</li>
+          <li><b>Gifting (4)</b> - most infra (coin ledger, animations, both-party sync); highest monetisation, build last.</li>
+        </ol>
+      </div>
+      <div style="background:#fff;border-radius:18px;padding:26px;box-shadow:0 4px 18px rgba(0,0,0,.05);grid-column:1 / -1">
+        <div style="font-size:16px;font-weight:700;color:#1a1523;margin-bottom:12px">Design decisions worth explaining</div>
+        <ul style="margin:0;padding-left:18px;font-size:14px;color:#4b5563;line-height:1.7">
+          <li><b>Anonymity preserved everywhere.</b> Avatars are always initials on a colour circle or the ghost - never photos. Cities (Jaipur, Indore) give human texture without identity.</li>
+          <li><b>Validation stays quiet.</b> Feature 3 uses single reaction <i>words</i> and soft tint - no counts, badges, streaks or confetti - so it reads as a compliment, not a scoreboard, matching the emotionally-safe brief.</li>
+          <li><b>Letter, not chat.</b> The post-call reveal uses a warm-white background, word-by-word fade, and "Save this message" - deliberately unlike the dark in-app chat, so it feels received rather than transacted.</li>
+          <li><b>Daytime vs night.</b> The 9 PM home swaps to a near-black ambient and shows <i>one</i> topic card instead of three - calmer, more intimate, signalling a different time of day.</li>
+          <li><b>Coins shown as warmth.</b> Gift costs use amber and the loss is framed as giving ("240 → 230"), never an aggressive store layout.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals(){ return {}; }
+}
+</script>
+</body>
+</html>
