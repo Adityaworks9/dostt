@@ -94,16 +94,19 @@ body{background:#1a1523;font-family:'Poppins',sans-serif;display:flex;align-item
 <!-- ═══════════════════════════════════════ HOME ═══════════════════════════════════════ -->
 <div class="screen active" id="s-home" style="background:#0c0818;color:#fff;display:flex;flex-direction:column">
   <div style="padding:54px 20px 0;display:flex;align-items:center;justify-content:space-between">
-    <span style="display:flex;align-items:center;gap:8px;font-size:22px;font-weight:700">
-      <svg viewBox="0 0 64 64" width="26" height="26" style="flex:none"><path d="M32 6c-12 0-20 9-20 21v25c0 2.4 2.8 3.6 4.6 2L22 49l5 4 5-4 5 4 5-4 5.4 5c1.8 1.6 4.6.4 4.6-2V27C52 15 44 6 32 6Z" fill="#fff"/><circle cx="25" cy="27" r="3.4" fill="#2D1B69"/><circle cx="39" cy="27" r="3.4" fill="#2D1B69"/></svg>dostt
-    </span>
-    <div onclick="nav('s-home')" style="display:flex;align-items:center;gap:7px;background:#1a1330;border-radius:999px;padding:7px 14px;font-size:14px;font-weight:600;color:#F59E0B;cursor:pointer">
+    <div style="display:flex;align-items:center;gap:10px">
+      <div style="width:36px;height:36px;border-radius:10px;background:#7C3AED;display:flex;align-items:center;justify-content:center;flex:none">
+        <svg viewBox="0 0 24 24" width="22" height="22"><path d="M12 3C8 3 5 6.2 5 10v9.5l2.5-2 2.5 2 2.5-2 2.5 2 2.5-2L20 19.5V10C20 6.2 17 3 12 3Z" fill="white"/><circle cx="9.5" cy="10" r="1.4" fill="#7C3AED"/><circle cx="14.5" cy="10" r="1.4" fill="#7C3AED"/></svg>
+      </div>
+      <span style="font-size:22px;font-weight:700">dostt</span>
+    </div>
+    <div onclick="nav('s-wallet')" style="display:flex;align-items:center;gap:7px;background:#1a1330;border-radius:999px;padding:7px 14px;font-size:14px;font-weight:600;color:#F59E0B;cursor:pointer;animation:damberpulse 3s ease-in-out infinite">
       <svg viewBox="0 0 24 24" width="15" height="15"><circle cx="12" cy="12" r="10" fill="#F5C518"/><circle cx="12" cy="12" r="7" fill="none" stroke="#C8910A" stroke-width="1.4"/><path d="M9.5 8.2h5M9.5 11h5M13 8.2c1.6 1.4 0 3.2-2.2 3.2L14 15" stroke="#8a6200" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>240
     </div>
   </div>
-  <div class="scroll" style="flex:1;padding:20px 20px 0">
+  <div class="scroll" style="flex:1;padding:20px 20px 90px">
     <!-- Tonight banner -->
-    <div style="background:linear-gradient(150deg,#2D1B69,#7C3AED);border-radius:24px;padding:22px;position:relative;overflow:hidden;box-shadow:0 10px 30px rgba(124,58,237,.4)">
+    <div style="background:linear-gradient(150deg,#2D1B69,#7C3AED);border-radius:24px;padding:14px;position:relative;overflow:hidden;box-shadow:0 10px 30px rgba(124,58,237,.4)">
       <div style="position:absolute;top:-18px;right:-10px;opacity:.12"><svg viewBox="0 0 64 64" width="180" height="180"><path d="M32 6c-12 0-20 9-20 21v25c0 2.4 2.8 3.6 4.6 2L22 49l5 4 5-4 5 4 5-4 5.4 5c1.8 1.6 4.6.4 4.6-2V27C52 15 44 6 32 6Z" fill="#fff"/></svg></div>
       <div style="font-size:12px;font-weight:600;letter-spacing:.14em;color:#e9d8ff">TONIGHT</div>
       <div style="display:flex;align-items:center;gap:8px;margin-top:10px">
@@ -112,8 +115,8 @@ body{background:#1a1523;font-family:'Poppins',sans-serif;display:flex;align-item
       </div>
       <div style="display:flex;align-items:center;gap:12px;margin-top:16px;background:rgba(0,0,0,.22);border-radius:16px;padding:12px 14px">
         <div style="position:relative;width:46px;height:46px;flex:none">
-          <div style="width:46px;height:46px;border-radius:50%;overflow:hidden">
-            <svg viewBox="0 0 64 64" width="46" height="46"><rect width="64" height="64" rx="32" fill="#4a2a5e"/><circle cx="32" cy="50" r="22" fill="#E8B088"/><circle cx="32" cy="33" r="14" fill="#F2BE92"/><path d="M18 30q2-16 14-16t14 16q1-10-3-15t-11-5-11 5-3 15Z" fill="#2a1810"/><circle cx="27" cy="33" r="1.7" fill="#2a1810"/><circle cx="37" cy="33" r="1.7" fill="#2a1810"/><path d="M28 38q4 3 8 0" stroke="#c07a52" stroke-width="1.7" fill="none" stroke-linecap="round"/></svg>
+          <div style="width:46px;height:46px;border-radius:50%;overflow:hidden;background:#2D1B69">
+            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Priya&skinColor=brown&facialHairChance=0" style="width:46px;height:46px;display:block">
           </div>
           <div style="position:absolute;bottom:0;right:0;width:13px;height:13px;border-radius:50%;background:#10B981;border:2px solid #2D1B69;animation:ddot 1.6s ease-in-out infinite"></div>
         </div>
@@ -124,8 +127,18 @@ body{background:#1a1523;font-family:'Poppins',sans-serif;display:flex;align-item
     <!-- Topic card -->
     <div style="margin-top:22px;font-size:13px;font-weight:600;letter-spacing:.1em;color:#8a7db8">TONIGHT'S TOPIC</div>
     <div style="margin-top:12px;border-radius:20px;overflow:hidden;background:#16101f;border:1px solid rgba(255,255,255,.07);cursor:pointer" onclick="nav('s-icebreaker')">
-      <div style="height:140px;background:linear-gradient(150deg,#3a2a5e,#241640);display:flex;align-items:center;justify-content:center;animation:dfloat 4s ease-in-out infinite">
-        <svg viewBox="0 0 32 32" width="50" height="50"><path d="M22 6a11 11 0 1 0 4 12 9 9 0 0 1-4-12z" fill="#E9D8FF"/></svg>
+      <div style="height:130px;position:relative;overflow:hidden;background:linear-gradient(160deg,#1a0d35,#0d0620)">
+        <svg viewBox="0 0 350 130" preserveAspectRatio="xMidYMid slice" style="position:absolute;inset:0;width:100%;height:100%">
+          <circle cx="30" cy="20" r="1.5" fill="#E9D8FF" opacity=".8"/><circle cx="80" cy="12" r="1" fill="#E9D8FF" opacity=".6"/><circle cx="140" cy="8" r="1.5" fill="#E9D8FF" opacity=".9"/><circle cx="200" cy="15" r="1" fill="#E9D8FF" opacity=".7"/><circle cx="260" cy="10" r="1.5" fill="#E9D8FF" opacity=".8"/><circle cx="55" cy="35" r="1" fill="#C4B5FD" opacity=".5"/><circle cx="110" cy="25" r="1" fill="#C4B5FD" opacity=".6"/><circle cx="175" cy="30" r="1" fill="#C4B5FD" opacity=".4"/><circle cx="240" cy="22" r="1" fill="#C4B5FD" opacity=".7"/>
+          <path d="M308 6 a18 18 0 1 1 0 30 a13 13 0 1 0 0-30Z" fill="#E9D8FF" opacity=".9"/>
+          <rect x="0" y="104" width="350" height="26" fill="#16101f"/>
+          <circle cx="100" cy="80" r="11" fill="#2D1B69"/><path d="M85 92 Q100 98 115 92 L120 104 Q100 108 80 104Z" fill="#2D1B69"/>
+          <circle cx="250" cy="80" r="11" fill="#3D2B79"/><path d="M235 92 Q250 98 265 92 L270 104 Q250 108 230 104Z" fill="#3D2B79"/>
+          <ellipse cx="175" cy="104" rx="9" ry="3" fill="#A85E22"/>
+          <path d="M175 101 C172 93 170 87 175 82 C180 87 178 93 175 101Z" fill="#F5A623"/>
+          <path d="M175 98 C173 92 172 89 175 85 C178 89 177 92 175 98Z" fill="#FFD36E"/>
+          <circle cx="132" cy="72" r="3.5" fill="#7C3AED" opacity=".7"/><circle cx="150" cy="64" r="4.5" fill="#7C3AED" opacity=".6"/><circle cx="169" cy="59" r="3" fill="#A855F7" opacity=".5"/><circle cx="186" cy="57" r="3" fill="#A855F7" opacity=".5"/><circle cx="205" cy="62" r="4" fill="#7C3AED" opacity=".6"/><circle cx="222" cy="70" r="3.5" fill="#7C3AED" opacity=".7"/>
+        </svg>
       </div>
       <div style="padding:16px"><div style="font-size:18px;font-weight:600">The things we don't say to family</div><div style="font-size:13px;color:#9d8fce;margin-top:4px">A gentle place to start tonight</div></div>
     </div>
@@ -137,7 +150,7 @@ body{background:#1a1523;font-family:'Poppins',sans-serif;display:flex;align-item
     </div>
     <!-- Message nudge -->
     <div style="margin-top:12px;background:#1a1330;border-radius:18px;padding:16px;display:flex;align-items:center;gap:12px;cursor:pointer" onclick="nav('s-reveal')">
-      <div style="width:42px;height:42px;border-radius:50%;overflow:hidden;flex:none"><svg viewBox="0 0 64 64" width="42" height="42"><rect width="64" height="64" rx="32" fill="#3a2a63"/><circle cx="32" cy="50" r="23" fill="#E0A878"/><circle cx="32" cy="32" r="15" fill="#EBB484"/><path d="M16 31q0-19 16-19t16 19q1-9-4-15t-12-6-12 6-4 15Z" fill="#241a10"/><circle cx="27" cy="32" r="1.7" fill="#241a10"/><circle cx="37" cy="32" r="1.7" fill="#241a10"/><path d="M28 37q4 3.4 8 0" stroke="#a86a3c" stroke-width="1.7" fill="none" stroke-linecap="round"/></svg></div>
+      <div style="width:42px;height:42px;border-radius:50%;overflow:hidden;background:#2D1B69;flex:none"><img src="https://api.dicebear.com/7.x/avataaars/svg?seed=SilentPanda&skinColor=brown&facialHairChance=0" style="width:42px;height:42px;display:block"></div>
       <div style="flex:1"><div style="font-size:14px;font-weight:600">SilentPanda left you something.</div><div style="font-size:13px;color:#9d8fce">A thought from your last call</div></div>
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#9d8fce" stroke-width="2" stroke-linecap="round"><path d="M9 18l6-6-6-6"/></svg>
     </div>
@@ -181,25 +194,25 @@ body{background:#1a1523;font-family:'Poppins',sans-serif;display:flex;align-item
     <!-- Listeners preview -->
     <div style="margin-top:26px;font-size:13px;font-weight:600;letter-spacing:.1em;color:#8a7db8">AVAILABLE NOW</div>
     <div style="margin-top:12px;display:flex;flex-direction:column;gap:12px">
-      <div class="listener-card" onclick="nav('s-icebreaker')">
+      <div class="listener-card" data-topics="anything family heartbreak" onclick="nav('s-icebreaker')">
         <div style="position:relative;width:52px;height:52px;flex:none">
-          <div style="width:52px;height:52px;border-radius:50%;overflow:hidden"><svg viewBox="0 0 64 64" width="52" height="52"><rect width="64" height="64" rx="32" fill="#4a2a5e"/><circle cx="32" cy="50" r="22" fill="#E8B088"/><circle cx="32" cy="33" r="14" fill="#F2BE92"/><path d="M18 30q2-16 14-16t14 16q1-10-3-15t-11-5-11 5-3 15Z" fill="#2a1810"/><circle cx="27" cy="33" r="1.7" fill="#2a1810"/><circle cx="37" cy="33" r="1.7" fill="#2a1810"/><path d="M28 38q4 3 8 0" stroke="#c07a52" stroke-width="1.7" fill="none" stroke-linecap="round"/></svg></div>
+          <div style="width:52px;height:52px;border-radius:50%;overflow:hidden;background:#2D1B69"><img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Priya&skinColor=brown&facialHairChance=0" style="width:52px;height:52px;display:block"></div>
           <div style="position:absolute;bottom:1px;right:1px;width:13px;height:13px;border-radius:50%;background:#10B981;border:2px solid #16101f;animation:ddot 1.6s ease-in-out infinite"></div>
         </div>
         <div style="flex:1"><div style="font-size:16px;font-weight:600">Priya</div><div style="font-size:13px;color:#10B981">● Online now</div><div style="font-size:12px;color:#9d8fce;margin-top:2px">Family · Heartbreak · 1 coin/min</div></div>
         <div style="width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,#7C3AED,#A855F7);display:flex;align-items:center;justify-content:center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg></div>
       </div>
-      <div class="listener-card" onclick="nav('s-icebreaker')">
+      <div class="listener-card" data-topics="anything career anxiety" onclick="nav('s-icebreaker')">
         <div style="position:relative;width:52px;height:52px;flex:none">
-          <div style="width:52px;height:52px;border-radius:50%;overflow:hidden"><svg viewBox="0 0 64 64" width="52" height="52"><rect width="64" height="64" rx="32" fill="#5a3a18"/><circle cx="32" cy="50" r="23" fill="#E0A878"/><circle cx="32" cy="32" r="15" fill="#EBB484"/><path d="M16 31q0-19 16-19t16 19q1-9-4-15t-12-6-12 6-4 15Z" fill="#241a10"/><circle cx="27" cy="32" r="1.7" fill="#241a10"/><circle cx="37" cy="32" r="1.7" fill="#241a10"/><path d="M28 37q4 3.4 8 0" stroke="#a86a3c" stroke-width="1.7" fill="none" stroke-linecap="round"/></svg></div>
+          <div style="width:52px;height:52px;border-radius:50%;overflow:hidden;background:#2D1B69"><img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Arjun&skinColor=brown&facialHairChance=30" style="width:52px;height:52px;display:block"></div>
           <div style="position:absolute;bottom:1px;right:1px;width:13px;height:13px;border-radius:50%;background:#10B981;border:2px solid #16101f;animation:ddot 1.6s ease-in-out infinite"></div>
         </div>
         <div style="flex:1"><div style="font-size:16px;font-weight:600">Arjun</div><div style="font-size:13px;color:#10B981">● Online now</div><div style="font-size:12px;color:#9d8fce;margin-top:2px">Career · Anxiety · 1 coin/min</div></div>
         <div style="width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,#7C3AED,#A855F7);display:flex;align-items:center;justify-content:center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg></div>
       </div>
-      <div class="listener-card away">
+      <div class="listener-card away" data-topics="anything lonely sleep">
         <div style="position:relative;width:52px;height:52px;flex:none">
-          <div style="width:52px;height:52px;border-radius:50%;overflow:hidden"><svg viewBox="0 0 64 64" width="52" height="52"><rect width="64" height="64" rx="32" fill="#3a3540"/><circle cx="32" cy="50" r="22" fill="#D8A880"/><circle cx="32" cy="33" r="14" fill="#E4B68C"/><path d="M18 30q2-16 14-16t14 16q1-10-3-15t-11-5-11 5-3 15Z" fill="#2b2620"/><circle cx="27" cy="33" r="1.7" fill="#2b2620"/><circle cx="37" cy="33" r="1.7" fill="#2b2620"/><path d="M28 38q4 3 8 0" stroke="#b07a52" stroke-width="1.7" fill="none" stroke-linecap="round"/></svg></div>
+          <div style="width:52px;height:52px;border-radius:50%;overflow:hidden;background:#2D1B69"><img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Meera&skinColor=brown&facialHairChance=0" style="width:52px;height:52px;display:block"></div>
           <div style="position:absolute;bottom:1px;right:1px;width:13px;height:13px;border-radius:50%;background:#6B7280;border:2px solid #16101f"></div>
         </div>
         <div style="flex:1"><div style="font-size:16px;font-weight:600">Meera</div><div style="font-size:13px;color:#9CA3AF">● Away</div><div style="font-size:12px;color:#6B7280;margin-top:2px">Loneliness · Sleep · 1 coin/min</div></div>
@@ -226,7 +239,7 @@ body{background:#1a1523;font-family:'Poppins',sans-serif;display:flex;align-item
     <div style="display:flex;flex-direction:column;gap:12px">
       <div class="listener-card" onclick="nav('s-icebreaker')">
         <div style="position:relative;width:52px;height:52px;flex:none">
-          <div style="width:52px;height:52px;border-radius:50%;overflow:hidden"><svg viewBox="0 0 64 64" width="52" height="52"><rect width="64" height="64" rx="32" fill="#3a2a63"/><circle cx="32" cy="50" r="23" fill="#E0A878"/><circle cx="32" cy="32" r="15" fill="#EBB484"/><path d="M16 31q0-19 16-19t16 19q1-9-4-15t-12-6-12 6-4 15Z" fill="#241a10"/><circle cx="27" cy="32" r="1.7" fill="#241a10"/><circle cx="37" cy="32" r="1.7" fill="#241a10"/><path d="M28 37q4 3.4 8 0" stroke="#a86a3c" stroke-width="1.7" fill="none" stroke-linecap="round"/></svg></div>
+          <div style="width:52px;height:52px;border-radius:50%;overflow:hidden;background:#2D1B69"><img src="https://api.dicebear.com/7.x/avataaars/svg?seed=SilentPanda&skinColor=brown&facialHairChance=0" style="width:52px;height:52px;display:block"></div>
           <div style="position:absolute;bottom:1px;right:1px;width:13px;height:13px;border-radius:50%;background:#10B981;border:2px solid #16101f;animation:ddot 1.6s ease-in-out infinite"></div>
         </div>
         <div style="flex:1"><div style="font-size:16px;font-weight:600">SilentPanda <span style="font-size:12px;color:#F59E0B">Favourite</span></div><div style="font-size:13px;color:#10B981">● Online now</div><div style="font-size:12px;color:#9d8fce;margin-top:2px">14 min · Yesterday</div></div>
@@ -234,7 +247,7 @@ body{background:#1a1523;font-family:'Poppins',sans-serif;display:flex;align-item
       </div>
       <div class="listener-card" onclick="nav('s-icebreaker')">
         <div style="position:relative;width:52px;height:52px;flex:none">
-          <div style="width:52px;height:52px;border-radius:50%;overflow:hidden"><svg viewBox="0 0 64 64" width="52" height="52"><rect width="64" height="64" rx="32" fill="#4a2a5e"/><circle cx="32" cy="50" r="22" fill="#E8B088"/><circle cx="32" cy="33" r="14" fill="#F2BE92"/><path d="M18 30q2-16 14-16t14 16q1-10-3-15t-11-5-11 5-3 15Z" fill="#2a1810"/><circle cx="27" cy="33" r="1.7" fill="#2a1810"/><circle cx="37" cy="33" r="1.7" fill="#2a1810"/><path d="M28 38q4 3 8 0" stroke="#c07a52" stroke-width="1.7" fill="none" stroke-linecap="round"/></svg></div>
+          <div style="width:52px;height:52px;border-radius:50%;overflow:hidden;background:#2D1B69"><img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Priya&skinColor=brown&facialHairChance=0" style="width:52px;height:52px;display:block"></div>
           <div style="position:absolute;bottom:1px;right:1px;width:13px;height:13px;border-radius:50%;background:#10B981;border:2px solid #16101f;animation:ddot 1.6s ease-in-out infinite"></div>
         </div>
         <div style="flex:1"><div style="font-size:16px;font-weight:600">Priya</div><div style="font-size:13px;color:#10B981">● Online now</div><div style="font-size:12px;color:#9d8fce;margin-top:2px">28 min · 3 days ago</div></div>
@@ -285,7 +298,7 @@ body{background:#1a1523;font-family:'Poppins',sans-serif;display:flex;align-item
 <div class="screen" id="s-connecting" style="background:radial-gradient(120% 80% at 50% 28%,#3a2280 0%,#1c1242 55%,#120a2c 100%);color:#fff;display:flex;flex-direction:column;align-items:center">
   <div style="padding-top:118px;display:flex;align-items:center">
     <div style="width:76px;height:76px;border-radius:50%;background:linear-gradient(135deg,#A855F7,#7C3AED);display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:600;border:3px solid #1c1242">You</div>
-    <div style="width:76px;height:76px;border-radius:50%;overflow:hidden;border:3px solid #1c1242;margin-left:-18px"><svg viewBox="0 0 64 64" width="76" height="76"><rect width="64" height="64" rx="32" fill="#3a2a63"/><circle cx="32" cy="50" r="23" fill="#E0A878"/><circle cx="32" cy="32" r="15" fill="#EBB484"/><path d="M16 31q0-19 16-19t16 19q1-9-4-15t-12-6-12 6-4 15Z" fill="#241a10"/><circle cx="27" cy="32" r="1.7" fill="#241a10"/><circle cx="37" cy="32" r="1.7" fill="#241a10"/><path d="M28 37q4 3.4 8 0" stroke="#a86a3c" stroke-width="1.7" fill="none" stroke-linecap="round"/></svg></div>
+    <div style="width:76px;height:76px;border-radius:50%;overflow:hidden;border:3px solid #1c1242;margin-left:-18px;background:#2D1B69"><img src="https://api.dicebear.com/7.x/avataaars/svg?seed=SilentPanda&skinColor=brown&facialHairChance=0" style="width:76px;height:76px;display:block"></div>
   </div>
   <div style="font-size:22px;font-weight:600;margin-top:38px;text-align:center;padding:0 44px;line-height:1.4">Connecting you with someone who gets it…</div>
   <div style="display:flex;gap:7px;margin-top:22px">
@@ -306,7 +319,7 @@ body{background:#1a1523;font-family:'Poppins',sans-serif;display:flex;align-item
 <!-- ════════════════════════════════════ IN-CALL ════════════════════════════════════ -->
 <div class="screen" id="s-incall" style="background:#0f0a1f;color:#fff;display:flex;flex-direction:column">
   <div style="padding:56px 24px 0;flex:1;display:flex;flex-direction:column;align-items:center">
-    <div style="width:96px;height:96px;border-radius:50%;overflow:hidden"><svg viewBox="0 0 64 64" width="96" height="96"><rect width="64" height="64" rx="32" fill="#3a2a63"/><circle cx="32" cy="50" r="23" fill="#E0A878"/><circle cx="32" cy="32" r="15" fill="#EBB484"/><path d="M16 31q0-19 16-19t16 19q1-9-4-15t-12-6-12 6-4 15Z" fill="#241a10"/><circle cx="27" cy="32" r="1.7" fill="#241a10"/><circle cx="37" cy="32" r="1.7" fill="#241a10"/><path d="M28 37q4 3.4 8 0" stroke="#a86a3c" stroke-width="1.7" fill="none" stroke-linecap="round"/></svg></div>
+    <div style="width:96px;height:96px;border-radius:50%;overflow:hidden;background:#2D1B69"><img src="https://api.dicebear.com/7.x/avataaars/svg?seed=SilentPanda&skinColor=brown&facialHairChance=0" style="width:96px;height:96px;display:block"></div>
     <div style="font-size:19px;font-weight:600;margin-top:16px">SilentPanda</div>
     <div style="font-size:14px;color:#10B981;margin-top:4px;display:flex;align-items:center;gap:6px"><span style="width:8px;height:8px;border-radius:50%;background:#10B981;display:inline-block;animation:ddot 1.6s ease-in-out infinite"></span><span id="call-timer">0:14</span> · on call</div>
     <!-- Waveform -->
@@ -379,11 +392,16 @@ body{background:#1a1523;font-family:'Poppins',sans-serif;display:flex;align-item
 
 <!-- ════════════════════════════════════ POST-CALL LISTENER ════════════════════════════════════ -->
 <div class="screen" id="s-postcall-listener" style="background:#0f0a1f;color:#fff;display:flex;flex-direction:column">
-  <div style="padding:56px 22px 0;text-align:center">
-    <div style="font-size:12px;color:#9d8fce;letter-spacing:.12em">CALL ENDED · 14 MIN</div>
-    <div style="width:66px;height:66px;border-radius:50%;overflow:hidden;margin:22px auto 0"><svg viewBox="0 0 64 64" width="66" height="66"><rect width="64" height="64" rx="32" fill="#3a2a63"/><circle cx="32" cy="50" r="23" fill="#E0A878"/><circle cx="32" cy="32" r="15" fill="#EBB484"/><path d="M16 31q0-19 16-19t16 19q1-9-4-15t-12-6-12 6-4 15Z" fill="#241a10"/><circle cx="27" cy="32" r="1.7" fill="#241a10"/><circle cx="37" cy="32" r="1.7" fill="#241a10"/><path d="M28 37q4 3.4 8 0" stroke="#a86a3c" stroke-width="1.7" fill="none" stroke-linecap="round"/></svg></div>
-    <div style="font-size:21px;font-weight:600;margin-top:16px">Leave SilentPanda a thought…</div>
-    <div style="font-size:14px;color:#9d8fce;margin-top:6px;padding:0 28px;line-height:1.5">They'll read it in a little while. Make it worth carrying.</div>
+  <div style="padding:56px 22px 0">
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px">
+      <span onclick="goBack()" style="font-size:28px;cursor:pointer;color:#C4B5FD;line-height:1">‹</span>
+    </div>
+    <div style="text-align:center">
+      <div style="font-size:12px;color:#9d8fce;letter-spacing:.12em">CALL ENDED · 14 MIN</div>
+      <div style="width:66px;height:66px;border-radius:50%;overflow:hidden;margin:22px auto 0;background:#2D1B69"><img src="https://api.dicebear.com/7.x/avataaars/svg?seed=SilentPanda&skinColor=brown&facialHairChance=0" style="width:66px;height:66px;display:block"></div>
+      <div style="font-size:21px;font-weight:600;margin-top:16px">Leave SilentPanda a thought…</div>
+      <div style="font-size:14px;color:#9d8fce;margin-top:6px;padding:0 28px;line-height:1.5">They'll read it in a little while. Make it worth carrying.</div>
+    </div>
   </div>
   <div style="padding:26px 22px 0;flex:1">
     <div id="listener-textarea" contenteditable="true" style="background:#1a1330;border:1px solid rgba(124,58,237,.4);border-radius:16px;padding:18px;min-height:132px;font-size:16px;line-height:1.5;font-family:'Poppins',sans-serif;color:#fff;outline:none" oninput="updateCharCount(this)">You spoke about your mother with so much grace. I hope you give yourself the same.</div>
@@ -393,7 +411,7 @@ body{background:#1a1523;font-family:'Poppins',sans-serif;display:flex;align-item
     </div>
   </div>
   <div style="padding:0 22px 42px;margin-top:auto">
-    <button class="btn-primary" onclick="nav('s-home')">
+    <button class="btn-primary" onclick="sendThought()">
       Send your thought
       <svg viewBox="0 0 64 64" width="17" height="17"><path d="M32 6c-12 0-20 9-20 21v25c0 2.4 2.8 3.6 4.6 2L22 49l5 4 5-4 5 4 5-4 5.4 5c1.8 1.6 4.6.4 4.6-2V27C52 15 44 6 32 6Z" fill="#fff"/><circle cx="25" cy="27" r="3.4" fill="#7C3AED"/><circle cx="39" cy="27" r="3.4" fill="#7C3AED"/></svg>
     </button>
@@ -403,11 +421,12 @@ body{background:#1a1523;font-family:'Poppins',sans-serif;display:flex;align-item
 
 <!-- ════════════════════════════════════ REVEAL ════════════════════════════════════ -->
 <div class="screen" id="s-reveal" style="background:#FBFAFF;color:#1a1523;display:flex;flex-direction:column">
-  <div style="padding:56px 22px 0;text-align:center">
-    <div style="font-size:12px;color:#7C3AED;letter-spacing:.14em;font-weight:600">A THOUGHT FOR YOU</div>
+  <div style="padding:56px 22px 0">
+    <span onclick="goBack()" style="font-size:28px;cursor:pointer;color:#7C3AED;line-height:1">‹</span>
+    <div style="text-align:center;margin-top:8px;font-size:12px;color:#7C3AED;letter-spacing:.14em;font-weight:600">A THOUGHT FOR YOU</div>
   </div>
-  <div style="padding:40px 30px 0;flex:1">
-    <div style="width:62px;height:62px;border-radius:50%;overflow:hidden;margin-bottom:26px"><svg viewBox="0 0 64 64" width="62" height="62"><rect width="64" height="64" rx="32" fill="#3a2a63"/><circle cx="32" cy="50" r="23" fill="#E0A878"/><circle cx="32" cy="32" r="15" fill="#EBB484"/><path d="M16 31q0-19 16-19t16 19q1-9-4-15t-12-6-12 6-4 15Z" fill="#241a10"/><circle cx="27" cy="32" r="1.7" fill="#241a10"/><circle cx="37" cy="32" r="1.7" fill="#241a10"/><path d="M28 37q4 3.4 8 0" stroke="#a86a3c" stroke-width="1.7" fill="none" stroke-linecap="round"/></svg></div>
+  <div style="padding:28px 30px 0;flex:1">
+    <div style="width:62px;height:62px;border-radius:50%;overflow:hidden;margin-bottom:26px;background:#2D1B69"><img src="https://api.dicebear.com/7.x/avataaars/svg?seed=SilentPanda&skinColor=brown&facialHairChance=0" style="width:62px;height:62px;display:block"></div>
     <div id="reveal-text" style="font-size:26px;font-weight:500;line-height:1.52;letter-spacing:-0.01em"></div>
     <div style="font-size:14px;color:#6B7280;margin-top:28px;animation:dfade .5s 2.5s ease both;opacity:0">- SilentPanda, after your call</div>
   </div>
@@ -422,18 +441,21 @@ body{background:#1a1523;font-family:'Poppins',sans-serif;display:flex;align-item
 
 <!-- ════════════════════════════════════ VALIDATION ════════════════════════════════════ -->
 <div class="screen" id="s-validation" style="background:#F3F0FF;color:#1a1523;display:flex;flex-direction:column">
-  <div style="padding:56px 24px 0;text-align:center">
+  <div style="padding:56px 24px 0">
+    <span onclick="goBack()" style="font-size:28px;cursor:pointer;color:#7C3AED;line-height:1">‹</span>
+    <div style="text-align:center;margin-top:8px">
     <div><svg viewBox="0 0 64 64" width="38" height="38"><path d="M32 6c-12 0-20 9-20 21v25c0 2.4 2.8 3.6 4.6 2L22 49l5 4 5-4 5 4 5-4 5.4 5c1.8 1.6 4.6.4 4.6-2V27C52 15 44 6 32 6Z" fill="#7C3AED"/><circle cx="25" cy="27" r="3.4" fill="#fff"/><circle cx="39" cy="27" r="3.4" fill="#fff"/><circle cx="20" cy="34" r="2.4" fill="#fff" opacity=".4"/><circle cx="44" cy="34" r="2.4" fill="#fff" opacity=".4"/></svg></div>
     <div style="font-size:24px;font-weight:600;margin-top:18px;line-height:1.36;padding:0 8px">Here's what people felt after talking with you.</div>
     <div style="font-size:14px;color:#6B7280;margin-top:10px">Two listeners, earlier today.</div>
+    </div>
   </div>
   <div style="padding:34px 24px 0;display:flex;flex-direction:column;gap:14px;flex:1">
     <div class="val-card" style="animation-delay:.1s">
-      <div style="width:52px;height:52px;border-radius:50%;overflow:hidden;flex:none"><svg viewBox="0 0 64 64" width="52" height="52"><rect width="64" height="64" rx="32" fill="#4a3470"/><circle cx="32" cy="50" r="23" fill="#E0A878"/><circle cx="32" cy="32" r="15" fill="#EBB484"/><path d="M16 31q0-19 16-19t16 19q1-9-4-15t-12-6-12 6-4 15Z" fill="#241a10"/><circle cx="27" cy="32" r="1.7" fill="#241a10"/><circle cx="37" cy="32" r="1.7" fill="#241a10"/><path d="M28 37q4 3.4 8 0" stroke="#a86a3c" stroke-width="1.7" fill="none" stroke-linecap="round"/></svg></div>
+      <div style="width:52px;height:52px;border-radius:50%;overflow:hidden;flex:none;background:#2D1B69"><img src="https://api.dicebear.com/7.x/avataaars/svg?seed=GentleRain&skinColor=brown&facialHairChance=0" style="width:52px;height:52px;display:block"></div>
       <div style="flex:1"><div style="font-size:14px;color:#6B7280">A listener from Jaipur felt you were</div><div style="font-size:22px;font-weight:600;color:#7C3AED;margin-top:2px">Genuine</div></div>
     </div>
     <div class="val-card" style="animation-delay:.3s">
-      <div style="width:52px;height:52px;border-radius:50%;overflow:hidden;flex:none"><svg viewBox="0 0 64 64" width="52" height="52"><rect width="64" height="64" rx="32" fill="#5a3a18"/><path d="M12 52q-3-40 20-40t20 40q1-14-3-26t-17-13-17 13-3 26Z" fill="#2a1810"/><circle cx="32" cy="50" r="22" fill="#E8B088"/><circle cx="32" cy="33" r="14" fill="#F2BE92"/><path d="M18 30q2-16 14-16t14 16q1-10-3-15t-11-5-11 5-3 15Z" fill="#2a1810"/><circle cx="27" cy="33" r="1.7" fill="#2a1810"/><circle cx="37" cy="33" r="1.7" fill="#2a1810"/><path d="M28 38q4 3 8 0" stroke="#c07a52" stroke-width="1.7" fill="none" stroke-linecap="round"/></svg></div>
+      <div style="width:52px;height:52px;border-radius:50%;overflow:hidden;flex:none;background:#2D1B69"><img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Arjun&skinColor=brown&facialHairChance=30" style="width:52px;height:52px;display:block"></div>
       <div style="flex:1"><div style="font-size:14px;color:#6B7280">A listener from Indore felt</div><div style="font-size:22px;font-weight:600;color:#7C3AED;margin-top:2px">Understood</div></div>
     </div>
   </div>
@@ -454,10 +476,10 @@ body{background:#1a1523;font-family:'Poppins',sans-serif;display:flex;align-item
     <div style="position:absolute;width:240px;height:240px;border-radius:50%;border:1px dashed rgba(196,181,253,.3);animation:dspin 16s linear infinite"></div>
     <div style="position:absolute;width:170px;height:170px;border-radius:50%;border:1px dashed rgba(196,181,253,.22)"></div>
     <div style="position:absolute;width:240px;height:240px;animation:dspin 9s linear infinite">
-      <div style="position:absolute;top:-3px;left:50%;transform:translateX(-50%);width:48px;height:48px;border-radius:50%;overflow:hidden"><svg viewBox="0 0 64 64" width="48" height="48"><rect width="64" height="64" rx="32" fill="#3a2a63"/><circle cx="32" cy="48" r="24" fill="#E8B68A"/><circle cx="32" cy="31" r="15" fill="#F0C49B"/><path d="M16 30q0-19 16-19t16 19q1-9-4-15t-12-6-12 6-4 15Z" fill="#2b1c12"/><circle cx="27" cy="31" r="1.6" fill="#2b1c12"/><circle cx="37" cy="31" r="1.6" fill="#2b1c12"/><path d="M28 36q4 3 8 0" stroke="#b9794a" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg></div>
-      <div style="position:absolute;bottom:-3px;left:50%;transform:translateX(-50%);width:48px;height:48px;border-radius:50%;overflow:hidden"><svg viewBox="0 0 64 64" width="48" height="48"><rect width="64" height="64" rx="32" fill="#5a3a18"/><circle cx="32" cy="48" r="24" fill="#C68A5A"/><circle cx="32" cy="31" r="15" fill="#D89A66"/><path d="M17 28q3-17 15-17t15 17q2-7-1-13t-14-7-14 7-1 13Z" fill="#1c1208"/><circle cx="27" cy="31" r="1.6" fill="#1c1208"/><circle cx="37" cy="31" r="1.6" fill="#1c1208"/><path d="M28 36q4 3 8 0" stroke="#8a5a32" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg></div>
-      <div style="position:absolute;left:-3px;top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:50%;overflow:hidden"><svg viewBox="0 0 64 64" width="48" height="48"><rect width="64" height="64" rx="32" fill="#1f5040"/><circle cx="32" cy="48" r="24" fill="#EAB892"/><circle cx="32" cy="31" r="15" fill="#F2C7A0"/><path d="M16 32q-1-21 16-21t16 21q3-10-2-17t-14-6-14 6-2 17Z" fill="#3a2417"/><circle cx="27" cy="31" r="1.6" fill="#3a2417"/><circle cx="37" cy="31" r="1.6" fill="#3a2417"/><path d="M28 36q4 3 8 0" stroke="#b07a4a" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg></div>
-      <div style="position:absolute;right:-3px;top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:50%;overflow:hidden"><svg viewBox="0 0 64 64" width="48" height="48"><rect width="64" height="64" rx="32" fill="#3c3470"/><circle cx="32" cy="48" r="24" fill="#D89A66"/><circle cx="32" cy="31" r="15" fill="#E4A973"/><path d="M16 30q0-19 16-19t16 19q1-9-4-15t-12-6-12 6-4 15Z" fill="#14110a"/><circle cx="27" cy="31" r="1.6" fill="#14110a"/><circle cx="37" cy="31" r="1.6" fill="#14110a"/><path d="M28 36q4 3 8 0" stroke="#9a6a3a" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg></div>
+      <div style="position:absolute;top:-3px;left:50%;transform:translateX(-50%);width:48px;height:48px;border-radius:50%;overflow:hidden;background:#2D1B69"><img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Kavita&skinColor=brown&facialHairChance=0" style="width:48px;height:48px;display:block"></div>
+      <div style="position:absolute;bottom:-3px;left:50%;transform:translateX(-50%);width:48px;height:48px;border-radius:50%;overflow:hidden;background:#2D1B69"><img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Rohan&skinColor=brown&facialHairChance=30" style="width:48px;height:48px;display:block"></div>
+      <div style="position:absolute;left:-3px;top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:50%;overflow:hidden;background:#2D1B69"><img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Deepa&skinColor=brown&facialHairChance=0" style="width:48px;height:48px;display:block"></div>
+      <div style="position:absolute;right:-3px;top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:50%;overflow:hidden;background:#2D1B69"><img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Farhan&skinColor=brown&facialHairChance=20" style="width:48px;height:48px;display:block"></div>
     </div>
     <div style="width:96px;height:96px;border-radius:50%;background:rgba(255,255,255,.1);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;animation:dpulse 2s ease-in-out infinite">
       <svg viewBox="0 0 64 64" width="50" height="50"><path d="M32 6c-12 0-20 9-20 21v25c0 2.4 2.8 3.6 4.6 2L22 49l5 4 5-4 5 4 5-4 5.4 5c1.8 1.6 4.6.4 4.6-2V27C52 15 44 6 32 6Z" fill="#fff"/><circle cx="25" cy="27" r="3.4" fill="#2D1B69"/><circle cx="39" cy="27" r="3.4" fill="#2D1B69"/><circle cx="20" cy="34" r="2.4" fill="#F9C8D6" opacity=".7"/><circle cx="44" cy="34" r="2.4" fill="#F9C8D6" opacity=".7"/></svg>
@@ -472,7 +494,10 @@ body{background:#1a1523;font-family:'Poppins',sans-serif;display:flex;align-item
 
 <!-- ════════════════════════════════════ MATCHED ════════════════════════════════════ -->
 <div class="screen" id="s-matched" style="background:radial-gradient(120% 80% at 50% 30%,#3a2280 0%,#1c1242 60%,#120a2c 100%);color:#fff;display:flex;flex-direction:column;align-items:center">
-  <div style="margin-top:118px;width:108px;height:108px;border-radius:50%;overflow:hidden;box-shadow:0 0 0 8px rgba(124,58,237,.22);animation:dfade .5s ease both"><svg viewBox="0 0 64 64" width="108" height="108"><rect width="64" height="64" rx="32" fill="#3a2a63"/><circle cx="32" cy="48" r="24" fill="#E8B68A"/><circle cx="32" cy="31" r="15" fill="#F0C49B"/><path d="M16 30q0-19 16-19t16 19q1-9-4-15t-12-6-12 6-4 15Z" fill="#2b1c12"/><circle cx="27" cy="31" r="1.7" fill="#2b1c12"/><circle cx="37" cy="31" r="1.7" fill="#2b1c12"/><path d="M28 36q4 3.4 8 0" stroke="#b9794a" stroke-width="1.7" fill="none" stroke-linecap="round"/></svg></div>
+  <div style="padding-top:56px;width:100%;padding-left:22px">
+    <span onclick="goBack()" style="font-size:28px;cursor:pointer;color:#C4B5FD;line-height:1">‹</span>
+  </div>
+  <div style="margin-top:32px;width:108px;height:108px;border-radius:50%;overflow:hidden;box-shadow:0 0 0 8px rgba(124,58,237,.22);animation:dfade .5s ease both;background:#2D1B69"><img src="https://api.dicebear.com/7.x/avataaars/svg?seed=RaaziDil&skinColor=brown&facialHairChance=0" style="width:108px;height:108px;display:block"></div>
   <div style="font-size:13px;color:#9d8fce;margin-top:24px;letter-spacing:.12em;animation:dfade .4s .1s ease both;opacity:0">YOU'RE MATCHED WITH</div>
   <div style="font-size:26px;font-weight:600;margin-top:8px;animation:dfade .4s .2s ease both;opacity:0">RaaziDil</div>
   <div style="display:flex;align-items:center;gap:7px;margin-top:8px;font-size:14px;color:#10B981;animation:dfade .4s .3s ease both;opacity:0"><span style="width:8px;height:8px;border-radius:50%;background:#10B981;display:inline-block;animation:ddot 1.6s ease-in-out infinite"></span>Online now - from Lucknow</div>
@@ -488,6 +513,63 @@ body{background:#1a1523;font-family:'Poppins',sans-serif;display:flex;align-item
       Say hello
     </button>
     <button class="btn-ghost" onclick="nav('s-matching')">Not feeling it? Find someone else</button>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════ WALLET ════════════════════════════════════ -->
+<div class="screen" id="s-wallet" style="background:#0c0818;color:#fff;display:flex;flex-direction:column">
+  <div style="padding:54px 22px 0;display:flex;align-items:center;gap:14px">
+    <span onclick="goBack()" style="font-size:28px;cursor:pointer;color:#C4B5FD;line-height:1">‹</span>
+    <span style="font-size:22px;font-weight:700">Wallet</span>
+  </div>
+  <div class="scroll" style="flex:1;padding:24px 22px 90px">
+    <div style="background:linear-gradient(150deg,#2D1B69,#7C3AED);border-radius:24px;padding:28px;text-align:center;box-shadow:0 10px 30px rgba(124,58,237,.4)">
+      <div style="font-size:13px;font-weight:600;letter-spacing:.12em;color:#E9D8FF">YOUR BALANCE</div>
+      <div style="display:flex;align-items:center;justify-content:center;gap:10px;margin-top:14px">
+        <svg viewBox="0 0 24 24" width="32" height="32"><circle cx="12" cy="12" r="10" fill="#F5C518"/><circle cx="12" cy="12" r="7" fill="none" stroke="#C8910A" stroke-width="1.4"/><path d="M9.5 8.2h5M9.5 11h5M13 8.2c1.6 1.4 0 3.2-2.2 3.2L14 15" stroke="#8a6200" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span id="wallet-balance" style="font-size:48px;font-weight:700;color:#F59E0B">240</span>
+      </div>
+      <div style="font-size:14px;color:#E9D8FF;margin-top:6px">coins available</div>
+    </div>
+    <div style="margin-top:22px;font-size:13px;font-weight:600;letter-spacing:.1em;color:#8a7db8">TOP UP</div>
+    <div style="margin-top:12px;display:flex;flex-direction:column;gap:10px">
+      <div style="background:#1a1330;border-radius:16px;padding:16px 18px;display:flex;align-items:center;justify-content:space-between;cursor:pointer" onclick="showToast('Coming soon')">
+        <div><div style="font-size:16px;font-weight:600">100 coins</div><div style="font-size:13px;color:#9d8fce;margin-top:2px">₹49</div></div>
+        <div style="background:linear-gradient(90deg,#7C3AED,#A855F7);border-radius:10px;padding:8px 18px;font-size:14px;font-weight:600">Buy</div>
+      </div>
+      <div style="background:#1a1330;border-radius:16px;padding:16px 18px;display:flex;align-items:center;justify-content:space-between;cursor:pointer" onclick="showToast('Coming soon')">
+        <div><div style="font-size:16px;font-weight:600">500 coins</div><div style="font-size:13px;color:#9d8fce;margin-top:2px">₹199 <span style="color:#10B981;font-weight:600">Save 20%</span></div></div>
+        <div style="background:linear-gradient(90deg,#7C3AED,#A855F7);border-radius:10px;padding:8px 18px;font-size:14px;font-weight:600">Buy</div>
+      </div>
+      <div style="background:#1a1330;border-radius:16px;padding:16px 18px;display:flex;align-items:center;justify-content:space-between;cursor:pointer" onclick="showToast('Coming soon')">
+        <div><div style="font-size:16px;font-weight:600">1000 coins</div><div style="font-size:13px;color:#9d8fce;margin-top:2px">₹349 <span style="color:#10B981;font-weight:600">Save 30%</span></div></div>
+        <div style="background:linear-gradient(90deg,#7C3AED,#A855F7);border-radius:10px;padding:8px 18px;font-size:14px;font-weight:600">Buy</div>
+      </div>
+    </div>
+    <div style="margin-top:22px;font-size:13px;font-weight:600;letter-spacing:.1em;color:#8a7db8">RECENT</div>
+    <div style="margin-top:12px;display:flex;flex-direction:column;gap:10px">
+      <div style="background:#1a1330;border-radius:16px;padding:14px 18px;display:flex;align-items:center;justify-content:space-between">
+        <div><div style="font-size:14px;font-weight:600">Chai sent to Priya</div><div style="font-size:12px;color:#9d8fce;margin-top:2px">Yesterday</div></div>
+        <div style="font-size:15px;font-weight:700;color:#F59E0B">−10</div>
+      </div>
+      <div style="background:#1a1330;border-radius:16px;padding:14px 18px;display:flex;align-items:center;justify-content:space-between">
+        <div><div style="font-size:14px;font-weight:600">Call with SilentPanda</div><div style="font-size:12px;color:#9d8fce;margin-top:2px">3 days ago · 14 min</div></div>
+        <div style="font-size:15px;font-weight:700;color:#F59E0B">−14</div>
+      </div>
+      <div style="background:#1a1330;border-radius:16px;padding:14px 18px;display:flex;align-items:center;justify-content:space-between">
+        <div><div style="font-size:14px;font-weight:600">Coins added</div><div style="font-size:12px;color:#9d8fce;margin-top:2px">1 week ago</div></div>
+        <div style="font-size:15px;font-weight:700;color:#10B981">+100</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════ SENT ════════════════════════════════════ -->
+<div class="screen" id="s-sent" style="background:#0f0a1f;color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center">
+  <div style="display:flex;flex-direction:column;align-items:center">
+    <svg viewBox="0 0 64 64" width="76" height="76" style="animation:dfloat 2s ease-in-out infinite"><path d="M32 6c-12 0-20 9-20 21v25c0 2.4 2.8 3.6 4.6 2L22 49l5 4 5-4 5 4 5-4 5.4 5c1.8 1.6 4.6.4 4.6-2V27C52 15 44 6 32 6Z" fill="#7C3AED"/><circle cx="25" cy="27" r="3.4" fill="#fff"/><circle cx="39" cy="27" r="3.4" fill="#fff"/><circle cx="20" cy="34" r="2.4" fill="#C4B5FD" opacity=".6"/><circle cx="44" cy="34" r="2.4" fill="#C4B5FD" opacity=".6"/></svg>
+    <div style="font-size:38px;font-weight:700;margin-top:22px;animation:dfade .4s ease both">Sent.</div>
+    <div style="font-size:16px;color:#9d8fce;margin-top:10px;text-align:center;padding:0 50px;line-height:1.5">They'll carry your words with them.</div>
   </div>
 </div>
 
@@ -638,10 +720,22 @@ function startMatching() {
   nav('s-matching');
 }
 
-// ─── Pill toggle ─────────────────────────────────────────────────────────
+// ─── Pill toggle + filter ─────────────────────────────────────────────────
 function togglePill(el) {
-  document.querySelectorAll('.pill').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('#pills .pill').forEach(p => p.classList.remove('active'));
   el.classList.add('active');
+  const label = el.textContent.trim().toLowerCase();
+  const isAll = label === 'anything tonight';
+  document.querySelectorAll('.listener-card[data-topics]').forEach(card => {
+    const topics = card.dataset.topics || '';
+    card.style.display = (isAll || topics.includes(label)) ? 'flex' : 'none';
+  });
+}
+
+// ─── Send thought → show s-sent then go home ─────────────────────────────
+function sendThought() {
+  nav('s-sent');
+  setTimeout(() => { if (current === 's-sent') nav('s-home'); }, 2000);
 }
 
 // ─── Char count ──────────────────────────────────────────────────────────
