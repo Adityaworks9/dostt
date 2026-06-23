@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>dostt — Strategy Deck</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ground:   #0c0818;
+  --surface:  #13092b;
+  --surface2: #1a1330;
+  --text:     #ede9fe;
+  --muted:    #9d8fce;
+  --faint:    #52456e;
+  --border:   rgba(255,255,255,0.07);
+  --accent:   #7c3aed;
+  --soft:     #a855f7;
+  --amber:    #f59e0b;
+  --green:    #10b981;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;overflow:hidden;background:var(--ground)}
+body{font-family:'Poppins',sans-serif;color:var(--text)}
+
+/* ─── Waveform canvas (the aesthetic risk — living audio motif behind every slide) */
+#wv{position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.09}
+
+/* ─── Deck */
+#deck{
+  display:flex;
+  height:100vh;
+  transition:transform .62s cubic-bezier(.76,0,.24,1);
+  will-change:transform;
+}
+.slide{
+  min-width:100vw;height:100vh;
+  display:flex;flex-direction:column;justify-content:center;
+  padding:64px 80px;
+  position:relative;overflow:hidden;
+  z-index:1;
+}
+.slide-inner{position:relative;z-index:2}
+
+/* ─── Chrome */
+#counter{
+  position:fixed;bottom:30px;right:40px;
+  font-size:11px;font-weight:600;letter-spacing:.18em;
+  color:var(--faint);z-index:50;
+}
+#dotbar{
+  position:fixed;bottom:34px;left:50%;transform:translateX(-50%);
+  display:flex;gap:7px;z-index:50;
+}
+.dot{
+  width:6px;height:6px;border-radius:3px;
+  background:rgba(255,255,255,.18);cursor:pointer;
+  transition:all .3s cubic-bezier(.4,0,.2,1);
+}
+.dot.on{width:22px;background:var(--accent)}
+.nav{
+  position:fixed;top:50%;transform:translateY(-50%);
+  width:40px;height:40px;border-radius:50%;
+  background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.09);
+  display:flex;align-items:center;justify-content:center;
+  cursor:pointer;z-index:50;
+  transition:background .2s;backdrop-filter:blur(10px);
+}
+.nav:hover{background:rgba(124,58,237,.22)}
+.nav svg{stroke:var(--text)}
+#np{left:18px}.nn{right:18px}
+
+/* ─── Shared type */
+.eye{
+  font-size:10px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--soft);margin-bottom:18px;
+}
+.h1{font-size:52px;font-weight:900;line-height:1.08;letter-spacing:-.03em;margin-bottom:10px}
+.h2{font-size:40px;font-weight:800;line-height:1.14;letter-spacing:-.02em;margin-bottom:36px}
+.body{font-size:14px;color:var(--muted);line-height:1.65}
+
+/* ─── Cards base */
+.card{
+  background:rgba(19,9,43,.8);
+  border:1px solid var(--border);
+  border-radius:16px;padding:26px;
+  backdrop-filter:blur(14px);
+}
+
+/* ════════════ SLIDE 1 · TITLE ════════════ */
+#s1{justify-content:flex-end;padding-bottom:90px}
+.brand{
+  font-size:min(140px,16vw);font-weight:900;
+  line-height:.9;letter-spacing:-.05em;
+  background:linear-gradient(130deg,#fff 0%,#c4b5fd 55%,#a855f7 100%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  background-clip:text;
+  margin-bottom:28px;
+}
+.tagline{
+  font-size:22px;font-weight:300;font-style:italic;
+  color:var(--muted);line-height:1.55;max-width:520px;
+  margin-bottom:30px;
+}
+.tagline strong{font-style:normal;font-weight:600;color:var(--text)}
+.pill-row{display:flex;flex-wrap:wrap;gap:10px}
+.pill{
+  font-size:11px;font-weight:500;color:var(--muted);
+  border:1px solid rgba(255,255,255,.1);border-radius:999px;
+  padding:6px 14px;
+}
+
+/* ════════════ SLIDE 2 · PROBLEM ════════════ */
+.pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:18px}
+.pcard{
+  background:rgba(19,9,43,.75);border:1px solid var(--border);
+  border-radius:16px;padding:28px 22px;
+  backdrop-filter:blur(14px);
+}
+.pcard .big{
+  font-size:48px;font-weight:900;
+  color:var(--soft);line-height:1;margin-bottom:12px;
+}
+.pcard p{font-size:13px;color:var(--muted);line-height:1.65}
+.pcard p strong{color:var(--text)}
+.insight{
+  background:linear-gradient(90deg,rgba(124,58,237,.18),rgba(168,85,247,.05));
+  border:1px solid rgba(124,58,237,.28);border-radius:12px;
+  padding:15px 20px;display:flex;align-items:center;gap:12px;
+  font-size:14px;color:var(--text);
+}
+.iblip{
+  width:8px;height:8px;border-radius:50%;background:var(--amber);
+  flex:none;animation:blip 2.2s ease-in-out infinite;
+}
+@keyframes blip{0%,100%{box-shadow:0 0 0 0 rgba(245,158,11,.55)}50%{box-shadow:0 0 0 9px rgba(245,158,11,0)}}
+
+/* ════════════ SLIDE 3 · OBSERVATIONS ════════════ */
+.ogrid{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+.ocard{
+  background:rgba(19,9,43,.75);border:1px solid var(--border);
+  border-radius:16px;padding:26px;backdrop-filter:blur(14px);
+  position:relative;overflow:hidden;
+}
+.ocard::before{
+  content:'';position:absolute;top:-1px;left:0;right:0;height:2px;
+  background:linear-gradient(90deg,var(--accent),transparent);
+}
+.onum{font-size:10px;font-weight:700;letter-spacing:.2em;color:var(--accent);margin-bottom:10px}
+.ocard h3{font-size:16px;font-weight:700;margin-bottom:7px}
+.ocard p{font-size:13px;color:var(--muted);line-height:1.65}
+
+/* ════════════ SLIDE 4 · AI ROLE ASSIGNMENT ════════════ */
+.versus{
+  display:grid;grid-template-columns:1fr 36px 1fr;
+  align-items:center;gap:0;margin-bottom:28px;
+}
+.vbox{
+  border:1px solid var(--border);border-radius:16px;padding:26px;
+  background:rgba(19,9,43,.7);
+}
+.vbox.lit{
+  border-color:var(--accent);
+  background:rgba(124,58,237,.1);
+}
+.vlabel{
+  font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;
+  margin-bottom:8px;
+}
+.vbox h3{font-size:18px;font-weight:700;margin-bottom:7px}
+.vbox p{font-size:13px;color:var(--muted);line-height:1.6}
+.vbox.lit p{color:#c4b5fd}
+.arr{text-align:center;font-size:22px;color:var(--faint)}
+.personas{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.persona{
+  background:rgba(19,9,43,.8);border:1px solid var(--border);
+  border-radius:14px;padding:16px 18px;
+  display:flex;align-items:flex-start;gap:13px;
+}
+.avt{
+  width:44px;height:44px;border-radius:50%;
+  border:2px solid rgba(124,58,237,.35);flex:none;overflow:hidden;
+}
+.avt img{width:100%;height:100%;display:block}
+.pname{font-size:15px;font-weight:700;margin-bottom:2px}
+.prole{font-size:11px;color:var(--soft);font-weight:500}
+.ptrait{font-size:11px;color:var(--muted);margin-top:3px;line-height:1.5}
+.online{
+  font-size:10px;font-weight:700;color:var(--green);
+  letter-spacing:.1em;margin-top:6px;
+}
+
+/* ════════════ SLIDE 5 · WHAT WE BUILT ════════════ */
+.bgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}
+.bcard{
+  background:rgba(19,9,43,.75);border:1px solid var(--border);
+  border-radius:16px;padding:22px;
+}
+.bicon{font-size:26px;margin-bottom:11px}
+.bcard h3{font-size:15px;font-weight:700;margin-bottom:6px}
+.bcard p{font-size:12px;color:var(--muted);line-height:1.65}
+
+/* ════════════ SLIDE 6 · RETENTION ════════════ */
+.mcols{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:18px}
+.mbox{
+  border:1px solid var(--border);border-radius:16px;padding:26px;
+  background:rgba(19,9,43,.6);
+}
+.mbox.dim{opacity:.45}
+.mbox.lit{border-color:var(--accent);background:rgba(124,58,237,.08)}
+.mhead{
+  font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--muted);margin-bottom:20px;display:flex;align-items:center;gap:8px;
+}
+.mhead.purple{color:var(--soft)}
+.mi{display:flex;gap:10px;margin-bottom:13px;align-items:flex-start}
+.mx{font-size:14px;flex:none;margin-top:1px;color:var(--faint)}
+.mc{color:var(--green)}
+.mtext{font-size:13px;line-height:1.5}
+.mwhy{font-size:11px;color:var(--muted);margin-top:2px}
+.rcall{
+  background:linear-gradient(90deg,rgba(124,58,237,.14),rgba(245,158,11,.05));
+  border:1px solid rgba(124,58,237,.22);border-radius:13px;
+  padding:18px 22px;font-size:14px;color:#c4b5fd;line-height:1.65;
+}
+.rcall strong{color:var(--text)}
+
+/* ════════════ SLIDE 7 · METRICS ════════════ */
+.tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}
+.tcard{
+  background:rgba(19,9,43,.75);border:1px solid var(--border);
+  border-radius:16px;padding:24px;
+}
+.tlabel{font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:3px}
+.tname{font-size:15px;font-weight:700;color:var(--soft);margin-bottom:20px}
+.mr{border-bottom:1px solid rgba(255,255,255,.05);padding-bottom:12px;margin-bottom:12px}
+.mr:last-child{border-bottom:none;padding-bottom:0;margin-bottom:0}
+.mrname{font-size:13px;font-weight:600;margin-bottom:2px}
+.mrval{font-size:12px;font-weight:700;color:var(--amber)}
+.mrwhy{font-size:11px;color:var(--muted);margin-top:2px;line-height:1.5}
+
+/* ════════════ SLIDE 8 · THE BET ════════════ */
+#s8{align-items:center;text-align:center}
+.betq{
+  font-size:clamp(22px,2.8vw,34px);font-weight:300;font-style:italic;
+  line-height:1.6;max-width:780px;letter-spacing:-.01em;
+  margin-bottom:28px;
+}
+.betq em{font-style:normal;font-weight:700;color:var(--soft)}
+.betq .amem{color:var(--amber);font-weight:700;font-style:normal}
+.betsub{font-size:15px;color:var(--muted);line-height:1.65;max-width:560px;margin:0 auto 36px}
+.betrow{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.betcta{
+  background:rgba(124,58,237,.12);border:1px solid rgba(124,58,237,.35);
+  border-radius:11px;padding:13px 22px;font-size:13px;font-weight:600;color:#c4b5fd;
+}
+
+/* ─── Responsive reduced-motion ─── */
+@media (prefers-reduced-motion:reduce){#wv{display:none}}
+</style>
+</head>
+<body>
+
+<canvas id="wv"></canvas>
+
+<!-- Nav chrome -->
+<button class="nav" id="np" onclick="go(-1)" aria-label="Previous slide">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg>
+</button>
+<button class="nav nn" onclick="go(1)" aria-label="Next slide">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round"><path d="M9 18l6-6-6-6"/></svg>
+</button>
+<div id="counter">01 / 08</div>
+<div id="dotbar"></div>
+
+<div id="deck">
+
+<!-- ══════════════════════════════════════════
+     SLIDE 1 · TITLE
+══════════════════════════════════════════ -->
+<div class="slide" id="s1">
+<div class="slide-inner">
+  <div class="eye">Product Strategy · AI Role Assignment · 2026</div>
+  <div class="brand">dostt</div>
+  <div class="tagline">What if an AI was always there<br><strong>when no one else was?</strong></div>
+  <div class="pill-row">
+    <span class="pill">Anonymous voice companionship</span>
+    <span class="pill">Built for India</span>
+    <span class="pill">AI-first listener network</span>
+    <span class="pill">Retention-first metric model</span>
+  </div>
+</div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     SLIDE 2 · PROBLEM
+══════════════════════════════════════════ -->
+<div class="slide" id="s2">
+<div class="slide-inner">
+  <div class="eye">The Problem</div>
+  <div class="h2">India's emotional infrastructure<br>was never built.</div>
+  <div class="pgrid">
+    <div class="pcard">
+      <div class="big">940M+</div>
+      <p><strong>People with smartphones</strong> and virtually no anonymous, stigma-free place to say the thing they can't say at home.</p>
+    </div>
+    <div class="pcard">
+      <div class="big" style="font-size:36px;padding-top:6px">Stigma<br>blocks<br>help</div>
+      <p><strong>Therapy = weakness</strong> in most Indian households. Seeking support openly carries social cost before a word is spoken.</p>
+    </div>
+    <div class="pcard">
+      <div class="big" style="font-size:36px;padding-top:6px">Identity<br>= <span style="color:var(--amber)">risk</span></div>
+      <p><strong>Every existing app exposes you</strong> — WhatsApp, Bumble BFF, even teletherapy. Your face or name is always attached.</p>
+    </div>
+  </div>
+  <div class="insight">
+    <div class="iblip"></div>
+    <span>The gap: people want to be heard, anonymously, right now — and nothing was built for that exact moment.</span>
+  </div>
+</div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     SLIDE 3 · PART 1 OBSERVATIONS
+══════════════════════════════════════════ -->
+<div class="slide" id="s3">
+<div class="slide-inner">
+  <div class="eye">Part 1 — Before We Built Anything</div>
+  <div class="h2">Four things that shaped<br>every decision after.</div>
+  <div class="ogrid">
+    <div class="ocard">
+      <div class="onum">OBS 01</div>
+      <h3>Voice beats text for vulnerability</h3>
+      <p>Indians talk — they don't type feelings. A voice call gives intimacy without exposing a face. Text threads create records; voice calls disappear. The medium is the safety.</p>
+    </div>
+    <div class="ocard">
+      <div class="onum">OBS 02</div>
+      <h3>"Just lonely" is a real front door</h3>
+      <p>Topic-first matching matters. Users need to name their need before reaching for help. Surfacing "Loneliness" and "Can't sleep" as first-class categories — not failures — removes the first barrier.</p>
+    </div>
+    <div class="ocard">
+      <div class="onum">OBS 03</div>
+      <h3>A cultural micro-economy works</h3>
+      <p>Chai, Diya, Mithai, Bandhan — gifts that feel native create emotional investment that generic emoji reactions don't. Familiarity lowers the emotional cost of giving.</p>
+    </div>
+    <div class="ocard">
+      <div class="onum">OBS 04</div>
+      <h3>11pm–2am is when it breaks open</h3>
+      <p>Peak emotional vulnerability happens at night, after the house goes quiet. Human listeners sleep. AI doesn't. That asymmetry isn't a feature — it's the core structural advantage.</p>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     SLIDE 4 · AI ROLE ASSIGNMENT
+══════════════════════════════════════════ -->
+<div class="slide" id="s4">
+<div class="slide-inner">
+  <div class="eye">The Strategy</div>
+  <div class="h2">Assign AI a role.<br>Not a task.</div>
+  <div class="versus">
+    <div class="vbox">
+      <div class="vlabel" style="color:var(--muted)">Traditional AI approach</div>
+      <h3>Answer questions. Complete tasks.</h3>
+      <p>Stateless, transactional, generic. You ask; it answers. Nothing carries over across sessions. Nobody is ever home.</p>
+    </div>
+    <div class="arr">→</div>
+    <div class="vbox lit">
+      <div class="vlabel" style="color:var(--soft)">dostt — AI Role Assignment</div>
+      <h3>Be Priya. Always. At 2am.</h3>
+      <p>The AI inhabits a defined emotional persona — consistent traits, specialisations, relational memory. A character you return to, not a service you use once.</p>
+    </div>
+  </div>
+  <div class="personas">
+    <div class="persona">
+      <div class="avt"><img src="https://api.dicebear.com/7.x/adventurer/png?seed=Priya&backgroundColor=2d1b69" alt="Priya"></div>
+      <div>
+        <div class="pname">Priya</div>
+        <div class="prole">Family &amp; Heartbreak</div>
+        <div class="ptrait">Warm. Non-judgmental.<br>Holds space without fixing.</div>
+        <div class="online">● ALWAYS ONLINE</div>
+      </div>
+    </div>
+    <div class="persona">
+      <div class="avt"><img src="https://api.dicebear.com/7.x/adventurer/png?seed=Arjun&backgroundColor=2d1b69" alt="Arjun"></div>
+      <div>
+        <div class="pname">Arjun</div>
+        <div class="prole">Career &amp; Anxiety</div>
+        <div class="ptrait">Grounded. Goal-oriented.<br>Direct without being cold.</div>
+        <div class="online">● ALWAYS ONLINE</div>
+      </div>
+    </div>
+    <div class="persona">
+      <div class="avt"><img src="https://api.dicebear.com/7.x/adventurer/png?seed=SilentPanda&backgroundColor=2d1b69" alt="SilentPanda"></div>
+      <div>
+        <div class="pname">SilentPanda</div>
+        <div class="prole">Loneliness &amp; Sleep</div>
+        <div class="ptrait">Calm. Patient.<br>Present at 2am without judgment.</div>
+        <div class="online">● ALWAYS ONLINE</div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     SLIDE 5 · WHAT WE BUILT
+══════════════════════════════════════════ -->
+<div class="slide" id="s5">
+<div class="slide-inner">
+  <div class="eye">What We Built</div>
+  <div class="h2">The architecture of presence.</div>
+  <div class="bgrid">
+    <div class="bcard">
+      <div class="bicon">🎭</div>
+      <h3>AI Listener Personas</h3>
+      <p>Named, illustrated, specialised characters — not chatbots. Each has a defined emotional lane, consistent tone, and an illustrated face built for true anonymity.</p>
+    </div>
+    <div class="bcard">
+      <div class="bicon">🔒</div>
+      <h3>Full Anonymity Stack</h3>
+      <p>No real photo, no real name, no profile linkage. A generated handle, an AI avatar. Social risk is structurally zero — by design, not by policy.</p>
+    </div>
+    <div class="bcard">
+      <div class="bicon">🎯</div>
+      <h3>Topic-First Matching</h3>
+      <p>Users name what's heavy before they connect: Family · Career · Loneliness · Can't sleep · Anxiety. The match starts from the problem, not the person.</p>
+    </div>
+    <div class="bcard">
+      <div class="bicon">🪙</div>
+      <h3>Coin Economy</h3>
+      <p>1 coin / min filters quality and creates skin in the game. Free enough to try. Meaningful enough that you don't waste it. The coin is a commitment device.</p>
+    </div>
+    <div class="bcard">
+      <div class="bicon">🎁</div>
+      <h3>Cultural Gift Layer</h3>
+      <p>Chai 10 · Rose 25 · Mithai 40 · Diya 60 · Bandhan 100 · Blessing 150. Gifts that feel Indian. Not stickers — gestures that carry weight.</p>
+    </div>
+    <div class="bcard">
+      <div class="bicon">💌</div>
+      <h3>Post-Call Thoughts</h3>
+      <p>After a call ends, leave a message they'll read later. The emotional loop closes. Something stays with them — even when the anonymity holds.</p>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     SLIDE 6 · RETENTION VS ENGAGEMENT
+══════════════════════════════════════════ -->
+<div class="slide" id="s6">
+<div class="slide-inner">
+  <div class="eye">The Metric Choice</div>
+  <div class="h2">We optimise for retention.<br><span style="color:var(--soft)">Here's why engagement misleads.</span></div>
+  <div class="mcols">
+    <div class="mbox dim">
+      <div class="mhead">Engagement — not the north star</div>
+      <div class="mi">
+        <div class="mx">✗</div>
+        <div>
+          <div class="mtext">Session length</div>
+          <div class="mwhy">One long call ≠ habit. Could be distress, not value.</div>
+        </div>
+      </div>
+      <div class="mi">
+        <div class="mx">✗</div>
+        <div>
+          <div class="mtext">Gifts sent</div>
+          <div class="mwhy">Proxy. Measures generosity in the moment, not trust over time.</div>
+        </div>
+      </div>
+      <div class="mi">
+        <div class="mx">✗</div>
+        <div>
+          <div class="mtext">DAU</div>
+          <div class="mwhy">Misleading for emotional apps. Nobody sees a therapist every day.</div>
+        </div>
+      </div>
+    </div>
+    <div class="mbox lit">
+      <div class="mhead purple">Retention ✓ — the north star</div>
+      <div class="mi">
+        <div class="mx mc">✓</div>
+        <div>
+          <div class="mtext">D7 return rate</div>
+          <div class="mwhy">Did they come back in their next moment of need?</div>
+        </div>
+      </div>
+      <div class="mi">
+        <div class="mx mc">✓</div>
+        <div>
+          <div class="mtext">Same-listener recall</div>
+          <div class="mwhy">Choosing Priya again = relationship forming, not transaction repeating.</div>
+        </div>
+      </div>
+      <div class="mi">
+        <div class="mx mc">✓</div>
+        <div>
+          <div class="mtext">Post-call thought rate</div>
+          <div class="mwhy">Emotional investment in the closing loop = strongest return signal we have.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="rcall">
+    Retention in dostt means <strong>trust</strong>. A user who returns is a user who healed a little — and came back because they believe they will again.
+  </div>
+</div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     SLIDE 7 · SUCCESS METRICS
+══════════════════════════════════════════ -->
+<div class="slide" id="s7">
+<div class="slide-inner">
+  <div class="eye">Success Metrics</div>
+  <div class="h2">Three tiers. One direction: <span style="color:var(--amber)">trust.</span></div>
+  <div class="tgrid">
+    <div class="tcard">
+      <div class="tlabel">Tier 1 · Weeks 1–4</div>
+      <div class="tname">Early Signals</div>
+      <div class="mr">
+        <div class="mrname">Call completion rate</div>
+        <div class="mrval">Target &gt; 70%</div>
+        <div class="mrwhy">Started and stayed. First proof the product earns the time.</div>
+      </div>
+      <div class="mr">
+        <div class="mrname">Post-call thought submission</div>
+        <div class="mrval">Target &gt; 40%</div>
+        <div class="mrwhy">Emotional investment in the loop — strongest early return predictor.</div>
+      </div>
+      <div class="mr">
+        <div class="mrname">D7 retention</div>
+        <div class="mrval">Target &gt; 25%</div>
+        <div class="mrwhy">Back within a week = the habit has a foothold. Baseline for everything.</div>
+      </div>
+    </div>
+    <div class="tcard">
+      <div class="tlabel">Tier 2 · Months 2–3</div>
+      <div class="tname">Trust Signals</div>
+      <div class="mr">
+        <div class="mrname">Same-listener repeat rate</div>
+        <div class="mrval">Target &gt; 35%</div>
+        <div class="mrwhy">Choosing the same AI persona again = relationship, not transaction.</div>
+      </div>
+      <div class="mr">
+        <div class="mrname">Gift send rate / session</div>
+        <div class="mrval">Target &gt; 15%</div>
+        <div class="mrwhy">Gratitude expressed = felt heard. The emotional receipt.</div>
+      </div>
+      <div class="mr">
+        <div class="mrname">Coin repurchase after depletion</div>
+        <div class="mrval">Target &gt; 20%</div>
+        <div class="mrwhy">Paid to return. The clearest possible vote of confidence.</div>
+      </div>
+    </div>
+    <div class="tcard">
+      <div class="tlabel">Tier 3 · Month 4+</div>
+      <div class="tname">PMF Signal</div>
+      <div class="mr">
+        <div class="mrname">Organic referral rate</div>
+        <div class="mrval">Target &gt; 30%</div>
+        <div class="mrwhy">"I told a friend." The highest-trust category of user behaviour possible.</div>
+      </div>
+      <div class="mr">
+        <div class="mrname">11pm–2am session spike</div>
+        <div class="mrval">Target &gt; 2× daytime</div>
+        <div class="mrwhy">Proves the night thesis. Peak need aligning with peak usage = product-market fit.</div>
+      </div>
+      <div class="mr">
+        <div class="mrname">Sean Ellis test</div>
+        <div class="mrval">Target &gt; 40%</div>
+        <div class="mrwhy">"Very disappointed if dostt was gone." The PMF threshold that matters.</div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     SLIDE 8 · THE BET
+══════════════════════════════════════════ -->
+<div class="slide" id="s8">
+<div class="slide-inner" style="display:flex;flex-direction:column;align-items:center;text-align:center">
+  <div class="eye">The Bet</div>
+  <div class="betq">
+    India doesn't need another social network.<br>
+    It needs a <em>safe place to fall apart</em> — anonymously,<br>
+    at <span class="amem">2am</span>, with someone who is <em>always there.</em>
+  </div>
+  <div class="betsub">
+    dostt is that place. AI role assignment makes it infinitely scalable —<br>
+    no listener ever sleeps, no conversation is ever turned away.
+  </div>
+  <div class="betrow">
+    <div class="betcta">Phase 1 · Pilot with 500 users</div>
+    <div class="betcta">Measure D7 return rate</div>
+    <div class="betcta">Tune persona specialisations</div>
+  </div>
+</div>
+</div>
+
+</div><!-- /deck -->
+
+<script>
+// ── Waveform canvas — living audio waveform as ambient texture
+const cv = document.getElementById('wv');
+const cx = cv.getContext('2d');
+let lines = [], W, H, raf;
+
+function resize() {
+  W = cv.width = innerWidth;
+  H = cv.height = innerHeight;
+  lines = Array.from({length: 32}, (_, i) => ({
+    y: (i / 31) * H,
+    amp: 5 + Math.random() * 22,
+    speed: .0015 + Math.random() * .003,
+    phase: Math.random() * Math.PI * 2,
+    freq: .12 + Math.random() * .1,
+  }));
+}
+
+let t = 0;
+function draw() {
+  cx.clearRect(0, 0, W, H);
+  cx.strokeStyle = '#7c3aed';
+  cx.lineWidth = .7;
+  lines.forEach(l => {
+    cx.beginPath();
+    for (let x = 0; x <= W; x += 4) {
+      const y = l.y + Math.sin(x * l.freq * .05 + t * l.speed * 80 + l.phase) * l.amp;
+      x === 0 ? cx.moveTo(x, y) : cx.lineTo(x, y);
+    }
+    cx.stroke();
+  });
+  t++;
+  raf = requestAnimationFrame(draw);
+}
+
+addEventListener('resize', resize);
+resize();
+
+if (!matchMedia('(prefers-reduced-motion:reduce)').matches) draw();
+
+// ── Slides
+const TOTAL = 8;
+let cur = 0;
+
+const deck = document.getElementById('deck');
+const counter = document.getElementById('counter');
+const dotbar = document.getElementById('dotbar');
+
+// Build dots
+for (let i = 0; i < TOTAL; i++) {
+  const d = document.createElement('div');
+  d.className = 'dot' + (i === 0 ? ' on' : '');
+  d.onclick = () => jump(i);
+  dotbar.appendChild(d);
+}
+
+function update() {
+  deck.style.transform = `translateX(${-cur * 100}vw)`;
+  counter.textContent = String(cur + 1).padStart(2,'0') + ' / ' + String(TOTAL).padStart(2,'0');
+  dotbar.querySelectorAll('.dot').forEach((d, i) => d.classList.toggle('on', i === cur));
+  document.getElementById('np').style.opacity = cur === 0 ? '.2' : '1';
+  document.querySelector('.nn').style.opacity = cur === TOTAL - 1 ? '.2' : '1';
+}
+
+function go(dir) {
+  const n = cur + dir;
+  if (n >= 0 && n < TOTAL) { cur = n; update(); }
+}
+function jump(i) { cur = i; update(); }
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'ArrowRight' || e.key === 'ArrowDown') go(1);
+  if (e.key === 'ArrowLeft'  || e.key === 'ArrowUp')   go(-1);
+});
+
+let tx = 0;
+document.addEventListener('touchstart', e => tx = e.touches[0].clientX, {passive:true});
+document.addEventListener('touchend', e => {
+  const d = tx - e.changedTouches[0].clientX;
+  if (Math.abs(d) > 44) go(d > 0 ? 1 : -1);
+}, {passive:true});
+
+update();
+</script>
+</body>
+</html>
